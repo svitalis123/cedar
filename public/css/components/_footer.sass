@@ -1,0 +1,153 @@
+.footer {
+    border-top: 1px solid rgba($neutrals4, .3);
+    @include dark {
+        border-color: $neutrals3; }
+    &__center {
+        display: flex;
+        @include m {
+            display: block; } }
+    &__body {
+        @include m {
+            position: relative;
+            padding-top: 32px; } }
+    &__col {
+        flex: 0 0 30.5%;
+        padding: 80px 86px 64px;
+        @include x {
+            padding: 80px 64px 64px; }
+        @include d {
+            flex: 0 0 34%; }
+        @include t {
+            padding: 64px 32px 48px; }
+        @include m {
+            padding: 32px 0;
+            border-bottom: 1px solid $neutrals6;
+            @include dark {
+                border-color: $neutrals3; } }
+        &:first-child {
+            display: flex;
+            flex: 0 0 39%;
+            padding-left: 0;
+            @include d {
+                flex: 0 0 32%; }
+            @include m {
+                display: block; } }
+        &:nth-child(3) {
+            padding-right: 0; }
+        &:nth-child(2),
+        &:nth-child(3) {
+            border-left: 1px solid $neutrals6;
+            @include m {
+                border-left: none; }
+            @include dark {
+                border-color: $neutrals3; } } }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 112px;
+        @include x {
+            margin-right: 76px; }
+        @include d {
+            margin-right: 40px; }
+        @include t {
+            margin-right: 24px; }
+        @include m {
+            margin: 0 0 40px; } }
+    &__logo {
+        display: inline-block;
+        width: 32px;
+        margin-bottom: auto;
+        overflow: hidden;
+        @include m {
+            width: auto; }
+        img {
+            width: 166px; } }
+    &__item {
+        .footer__category {
+            display: none;
+            @include m {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0; }
+            .icon {
+                width: 9px;
+                height: 9px;
+                margin-left: auto;
+                fill: $neutrals4;
+                transition: transform .2s; }
+            &.active {
+                @include m {
+                    .icon {
+                        transform: rotate(180deg); } } } } }
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include rmin(768) {
+            display: flex !important; }
+        @include m {
+            display: none;
+            padding-top: 40px; } }
+    &__link {
+        @include button-2;
+        color: $neutrals4;
+        transition: color .2s;
+        @include m {
+            display: block; }
+        &:hover {
+            color: $neutrals2;
+            @include dark {
+                color: $neutrals8; } }
+        &:not(:last-child) {
+            margin-bottom: 24px; } }
+    &__category {
+        margin-bottom: 41px;
+        @include hairline-2; }
+    &__info {
+        @include caption-1;
+        p {
+            &:not(:last-child) {
+                margin-bottom: 8px; } }
+        &:not(:last-child) {
+            margin-bottom: 24px; } }
+    &__bottom {
+        padding: 25px 0 20px;
+        border-top: 1px solid $neutrals6;
+        @include m {
+            padding: 56px 0 48px;
+            border: none; }
+        @include dark {
+            border-color: $neutrals3; } }
+    &__copyright {
+        margin-right: auto;
+        @include caption-2;
+        color: $neutrals4;
+        @include m {
+            margin: 0 0 24px; } }
+    &__socials {
+        display: flex; }
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        .icon {
+            width: 16px;
+            height: 16px;
+            fill: $neutrals4;
+            transition: fill .2s;
+            &-twitter {
+                width: 18px;
+                height: 18px; }
+            &-behance {
+                width: 20px;
+                height: 20px; } }
+        &:hover .icon {
+            fill: $neutrals2;
+            @include dark {
+                fill: $neutrals8; } }
+        &:not(:last-child) {
+            margin-right: 24px; } } }

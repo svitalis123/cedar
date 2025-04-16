@@ -1,0 +1,40 @@
+.review {
+    &__center {
+        max-width: 896px; }
+    &__wrap {
+        margin: 0 -12px;
+        text-align: center; }
+    &__slider {
+        visibility: hidden;
+        padding-bottom: 70px;
+        @include m {
+            padding-bottom: 64px; }
+        &.slick-initialized {
+            visibility: visible; } }
+    &__logo {
+        display: inline-block; }
+    &__title {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $neutrals6;
+        @include sf-pro-display;
+        font-size: 40px;
+        line-height: 1.2;
+        @include m {
+            font-size: 32px; }
+        @include dark {
+            border-color: $neutrals3; } }
+    &__author {
+        margin-bottom: 4px;
+        font-weight: 600; }
+    &__position {
+        @include caption-1;
+        color: $neutrals4; }
+    .slick-slide {
+        padding: 0 12px; }
+    .slick-arrow {
+        bottom: 0; }
+    .slick-prev {
+        left: calc(50% - 34px); }
+    .slick-next {
+        right: calc(50% - 34px); } }

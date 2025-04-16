@@ -1,0 +1,21 @@
+[data-aos="animation-opacity"] {
+  opacity: 0;
+  transition-property: opacity;
+  &.aos-animate {
+    opacity: 1; } }
+
+[data-aos="animation-translate-up"] {
+  transform: translateY(40px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translate(0);
+    opacity: 1; } }
+
+[data-aos="animation-translate-down"] {
+  transform: translateY(-40px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translate(0);
+    opacity: 1; } }

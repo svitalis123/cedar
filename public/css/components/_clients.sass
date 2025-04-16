@@ -1,0 +1,38 @@
+.clients {
+    &__title {
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: 600; }
+    &__list {
+        display: flex;
+        margin: 0 -12px;
+        @include d {
+            margin: 0 -8px; }
+        @include m {
+            margin: 0 -32px;
+            overflow: auto;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            &::-webkit-scrollbar {
+                display: none; }
+            &:before,
+            &:after {
+                content: "";
+                flex-shrink: 0;
+                width: 32px;
+                height: 1px; } } }
+    &__logo {
+        flex: 1;
+        margin: 0 12px;
+        @include d {
+            margin: 0 8px; }
+        @include m {
+            flex: 0 0 140px;
+            margin: 0; }
+        img {
+            width: 100%; }
+        &:not(:last-child) {
+            @include m {
+                margin-right: 16px; } } } }

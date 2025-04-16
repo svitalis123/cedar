@@ -1,0 +1,108 @@
+.comment {
+    &__wrapper {
+        position: relative;
+        @include m {
+            padding-bottom: 64px; } }
+    &__wrap {
+        margin: 0 -16px;
+        text-align: center; }
+    &__head {
+        max-width: calc(50% - 16px);
+        margin: 0 0 80px auto;
+        @include d {
+            max-width: calc(66.66% - 16px); }
+        @include m {
+            max-width: 100%;
+            margin: 0 0 48px; } }
+    &__title {
+        margin-bottom: 20px; }
+    &__info {
+        color: $neutrals3;
+        @include dark {
+            color: $neutrals6; } }
+    &__slider {
+        position: static;
+        visibility: hidden;
+        &.slick-initialized {
+            visibility: visible; } }
+    &__item {
+        display: block;
+        text-align: center;
+        color: $neutrals2;
+        @include dark {
+            color: $neutrals8; } }
+    &__preview {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 222px;
+        margin-bottom: 24px;
+        background: $neutrals6;
+        border-radius: 8px;
+        @include dark {
+            background: $neutrals3; }
+        img {
+            max-width: 120px;
+            max-height: 120px; }
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .2s; }
+        &:before {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $neutrals2;
+            border-radius: 8px;
+            @include dark {
+                background: $neutrals8; } }
+        &:after {
+            top: 50%;
+            left: 50%;
+            width: 48px;
+            height: 48px;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            background: $neutrals8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' fill='none' xmlns:v='https://vecta.io/nano'%3E%3Cpath fill-rule='evenodd' d='M6.394.843c.271-.25.692-.233.942.038L9.49 3.214c.236.255.236.649 0 .904L7.336 6.452c-.25.271-.672.287-.942.038s-.287-.672-.038-.942l1.121-1.215H1c-.368 0-.667-.298-.667-.667S.632 3 1 3h6.477L6.356 1.786c-.25-.271-.233-.692.038-.942z' fill='%23777e91'/%3E%3C/svg%3E") no-repeat 50% 50% / 10px auto;
+            @include dark {
+                background-color: $neutrals2;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' fill='none' xmlns:v='https://vecta.io/nano'%3E%3Cpath fill-rule='evenodd' d='M6.394.843c.271-.25.692-.233.942.038L9.49 3.214c.236.255.236.649 0 .904L7.336 6.452c-.25.271-.672.287-.942.038s-.287-.672-.038-.942l1.121-1.215H1c-.368 0-.667-.298-.667-.667S.632 3 1 3h6.477L6.356 1.786c-.25-.271-.233-.692.038-.942z' fill='%23777E90'/%3E%3C/svg%3E"); } } }
+    &__item:hover &__preview {
+        &:before,
+        &:after {
+            opacity: 1;
+            visibility: visible; } }
+    &__subtitle {
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: $neutrals2;
+        @include dark {
+            color: $neutrals8; } }
+    &__content {
+        @include caption-1;
+        color: $neutrals4; }
+    .slick-slide {
+        padding: 0 16px;
+        opacity: 0;
+        transition: opacity .4s;
+        &.slick-active {
+            opacity: 1; } }
+    .slick-arrow {
+        top: 0;
+        @include m {
+            top: auto;
+            bottom: 0; } }
+    .slick-prev {
+        left: 0;
+        @include m {
+            left: calc(50% - 34px); } }
+    .slick-next {
+        left: 44px;
+        @include m {
+            left: auto;
+            right: calc(50% - 34px); } } }

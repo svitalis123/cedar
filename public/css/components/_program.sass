@@ -1,0 +1,94 @@
+.program {
+    &__wrap {
+        display: flex;
+        align-items: center;
+        padding: 48px 76px 64px;
+        background: $neutrals8;
+        box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1);
+        border-radius: 24px;
+        @include d {
+            padding: 48px 24px; }
+        @include m {
+            display: block;
+            border-radius: 16px; }
+        @include dark {
+            background: $neutrals1; } }
+    &__col {
+        &:first-child {
+            flex: 0 0 372px;
+            padding-bottom: 40px;
+            @include m {
+                margin: 0 -10px 16px;
+                padding-bottom: 0; } }
+        &:nth-child(2) {
+            flex-grow: 1;
+            padding-left: 20px;
+            text-align: center;
+            @include m {
+                padding-left: 0; } } }
+    .stage-small {
+        margin-bottom: 24px;
+        padding-left: 24px;
+        @include m {
+            margin-bottom: 16px;
+            padding-left: 10px; } }
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 16px;
+        @include body-1;
+        font-weight: 600;
+        color: $neutrals2;
+        transition: background .2s;
+        @include m {
+            padding: 10px;
+            font-size: 18px; }
+        &:hover {
+            background: $neutrals7; }
+        @include dark {
+            background: $neutrals2;
+            color: $neutrals8;
+            &:hover {
+                background: $neutrals3; } }
+        &:not(:last-child) {
+            margin-bottom: 16px;
+            @include m {
+                margin-bottom: 0; } }
+        @include dark {
+            &:not(:last-child) {
+                @include m {
+                    margin-bottom: 8px; } } } }
+    &__arrow {
+        margin-left: auto;
+        padding-left: 20px;
+        .icon {
+            width: 14px;
+            height: 14px;
+            fill: $neutrals4; } }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        margin-right: 20px;
+        border-radius: 12px;
+        @include m {
+            margin-right: 12px; }
+        img {
+            max-width: 24px;
+            max-height: 24px; } }
+    &__preview {
+        margin-bottom: 42px;
+        @include m {
+            margin-bottom: 32px; }
+        img {
+            max-width: 400px;
+            @include d {
+                max-width: 240px; } } }
+    &__info {
+        max-width: 380px;
+        margin: 0 auto 24px;
+        color: $neutrals4; } }

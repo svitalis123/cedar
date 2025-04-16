@@ -1,0 +1,54 @@
+.text {
+	&-right {
+		text-align: right; }
+	&-center {
+		text-align: center; }
+	&-uppercase {
+		text-transform: uppercase; } }
+
+.m-auto {
+	margin: auto; }
+.ml-auto {
+	margin-left: auto; }
+.mr-auto {
+	margin-right: auto; }
+
+.align {
+	&-baseline {
+		align-items: baseline; } }
+
+.desktop {
+	&-hide {
+		@include d {
+			display: none !important; } }
+	&-show {
+		display: none !important;
+		@include d {
+			display: block !important; } }
+	&-text-right {
+		@include d {
+			text-align: right !important; } } }
+
+.tablet {
+	&-hide {
+		@include t {
+			display: none !important; } }
+	&-show {
+		display: none !important;
+		@include t {
+			display: block !important; } }
+	&-text-right {
+		@include t {
+			text-align: right !important; } } }
+
+.mobile {
+	&-hide {
+		@include m {
+			display: none !important; } }
+	&-show {
+		display: none !important;
+		@include m {
+			display: block !important; } }
+	&-text-right {
+		@include m {
+			text-align: right !important; } } }

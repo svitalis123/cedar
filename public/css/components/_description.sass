@@ -1,0 +1,159 @@
+.description {
+    padding-top: 80px;
+    overflow: hidden;
+    &__center {
+        display: flex;
+        align-items: flex-start;
+        @include t {
+            display: block; } }
+    &__col {
+        &:first-child {
+            flex: 0 0 calc(100% - 352px);
+            max-width: calc(100% - 352px);
+            padding-right: 96px;
+            @include d {
+                flex: 0 0 calc(100% - 305px);
+                max-width: calc(100% - 305px);
+                padding-right: 32px; }
+            @include t {
+                max-width: 100%;
+                margin-bottom: 48px;
+                padding: 0; }
+            @include m {
+                margin-bottom: 32px; } }
+        &:nth-child(2) {
+            flex: 0 0 352px;
+            max-width: 352px;
+            @include d {
+                flex: 0 0 305px;
+                max-width: 305px; }
+            @include t {
+                max-width: 100%; } } }
+    &__details {
+        display: flex;
+        margin-bottom: 16px; }
+    &__status {
+        &:not(:last-child) {
+            margin-right: 4px; } }
+    &__title {
+        margin-bottom: 8px; }
+    &__info {
+        margin-bottom: 48px;
+        @include body-1;
+        color: $neutrals4;
+        @include m {
+            margin-bottom: 24px;
+            font-size: 16px; } }
+    &__wrap {
+        margin: 0 -10px; }
+    &__slider {
+        visibility: hidden;
+        &.slick-initialized {
+            visibility: visible; } }
+    &__preview {
+        position: relative;
+        img {
+            width: 100%;
+            border-radius: 16px; } }
+    &__item {
+        display: flex;
+        @include caption-1;
+        font-weight: 500;
+        &:not(:last-child) {
+            margin-bottom: 20px; } }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 20px;
+        height: 24px;
+        margin-right: 12px;
+        .icon {
+            width: 16px;
+            height: 16px;
+            fill: $neutrals4;
+            &-scoreboard {
+                width: 20px;
+                height: 20px; }
+            &-candlesticks {
+                width: 18px;
+                height: 18px; } } }
+    &__parameter {
+        flex: 0 0 156px;
+        padding-right: 16px;
+        color: $neutrals4; }
+    &__text {
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top: 1px solid $neutrals6;
+        color: $neutrals3;
+        @include d {
+            margin-top: 32px;
+            padding-top: 32px; }
+        @include dark {
+            border-color: $neutrals3;
+            color: $neutrals6; }
+        p {
+            &:not(:last-child) {
+                margin-bottom: 24px; } } }
+    &__list {
+        margin-top: 40px;
+        padding: 24px 20px;
+        border-radius: 8px;
+        border: 2px solid $neutrals6;
+        @include d {
+            margin-top: 32px; }
+        @include dark {
+            border-color: $neutrals3; }
+        li {
+            position: relative;
+            padding-left: 26px;
+            font-weight: 600;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' viewBox='0 0 18 18'%3E%3Cpath fill-rule='evenodd' d='M8.999 17.333c4.602 0 8.333-3.731 8.333-8.333S13.602.667 8.999.667.666 4.398.666 9s3.731 8.333 8.333 8.333zm4.874-10.126a1 1 0 0 0-1.414-1.414l-4.293 4.293-1.793-1.793a1 1 0 1 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l5-5z' fill='%2345b36b'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto; }
+            &:not(:last-child) {
+                margin-bottom: 8px; } } }
+    &__btns {
+        display: flex;
+        margin-top: 48px;
+        @include d {
+            margin-top: 40px; }
+        .description__button {
+            &:first-child {
+                margin-right: 12px; }
+            &:nth-child(2) {
+                flex-grow: 1; } } }
+    .slick-list {
+        font-size: 0; }
+    .slick-slide {
+        padding: 0 10px; }
+    .slick-dots {
+        display: flex !important;
+        justify-content: center;
+        margin-top: 32px;
+        font-size: 0;
+        li {
+            button {
+                position: relative;
+                width: 8px;
+                height: 8px;
+                background: none;
+                border: 1px solid $neutrals4;
+                border-radius: 50%;
+                font-size: 0;
+                transition: all .2s;
+                &:hover {
+                    border-color: $red; } }
+            &.slick-active {
+                button {
+                    background: $red;
+                    border-color: $red; } }
+            &:not(:last-child) {
+                margin-right: 12px; } } } }

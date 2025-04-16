@@ -1,0 +1,84 @@
+.main3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 880px;
+    padding: 34px 0 215px;
+    overflow: hidden;
+    @include d {
+        align-items: flex-start;
+        min-height: 784px;
+        padding: 96px 0 180px; }
+    @include m {
+        padding: 64px 0 168px; }
+    &__wrap {
+        position: relative;
+        z-index: 3;
+        max-width: 450px;
+        @include d {
+            max-width: 420px; }
+        @include t {
+            max-width: 320px; }
+        @include m {
+            max-width: 100%; } }
+    &__title {
+        margin-bottom: 20px; }
+    &__text {
+        margin-bottom: 40px;
+        color: $neutrals4; }
+    &__btns {
+        display: flex; }
+    &__button {
+        &:not(:last-child) {
+            margin-right: 16px; } }
+    .scroll {
+        position: absolute;
+        bottom: 96px;
+        @include d {
+            bottom: 80px; }
+        @include m {
+            bottom: 64px; } }
+    &__gallery {
+        position: absolute;
+        top: 50%;
+        right: calc(50% - 556px);
+        width: 546px;
+        transform: translateY(-63%);
+        pointer-events: none;
+        @include d {
+            width: 450px;
+            transform: translateY(-65%); }
+        @include t {
+            right: calc(50% - 450px); }
+        @include m {
+            position: relative;
+            top: auto;
+            right: auto;
+            margin: 40px auto 0;
+            transform: translateY(0); }
+        @include s {
+            left: -13%; } }
+    &__preview {
+        &:first-child {
+            position: relative;
+            z-index: 2; }
+        &:nth-child(2) {
+            top: 27%;
+            right: -1%;
+            z-index: 3;
+            width: 27%; }
+        &:nth-child(3) {
+            top: 44%;
+            left: 1.5%;
+            z-index: 1;
+            width: 10%; }
+        &:nth-child(4) {
+            right: 17%;
+            bottom: 14%;
+            z-index: 1;
+            width: 28%;
+            transform: rotate(-12deg); }
+        &:not(:first-child) {
+            position: absolute; }
+        img {
+            width: 100%; } } }

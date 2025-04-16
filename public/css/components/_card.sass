@@ -1,0 +1,83 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    color: $neutrals2;
+    @include dark {
+        color: $neutrals8; }
+    &:hover {
+        .card__preview {
+            box-shadow: 0 0 0 3px $red;
+            img {
+                transform: scale(1.1);
+                @include m {
+                    transform: scale(1); } } } }
+    &__preview {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        transition: box-shadow .2s;
+        img {
+            width: 100%;
+            border-radius: 16px;
+            transition: transform 2s; } }
+    &__category {
+        position: absolute;
+        top: 8px;
+        left: 8px; }
+    &__head {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 1;
+        padding: 20px 0 12px;
+        @include m {
+            display: block;
+            padding: 16px 0; } }
+    &__level {
+        flex-shrink: 0;
+        margin-left: 10px;
+        @include m {
+            margin: 8px 0 0 56px; } }
+    &__user {
+        display: flex;
+        margin-right: auto;
+        @include m {
+            margin-right: 0; } }
+    &__avatar {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        margin: 5px 16px 0 0;
+        border-radius: 50%;
+        background: $neutrals6;
+        @include dark {
+            background: $neutrals3; }
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; } }
+    &__title {
+        margin-bottom: 2px;
+        font-weight: 600; }
+    &__trainer {
+        @include caption-1;
+        color: $neutrals4; }
+    &__parameters {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0 20px;
+        border-top: 1px solid $neutrals6;
+        @include dark {
+            border-color: $neutrals3; } }
+    &__parameter {
+        display: flex;
+        align-items: center;
+        @include caption-2;
+        font-weight: 600;
+        color: $neutrals3;
+        @include dark {
+            color: $neutrals6; }
+        .icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            fill: $neutrals4; } } }

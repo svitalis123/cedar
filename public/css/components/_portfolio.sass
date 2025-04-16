@@ -1,0 +1,227 @@
+.portfolio {
+    padding: 40px 0 124px;
+    @include m {
+        padding-bottom: 64px; }
+    &__top {
+        max-width: 670px;
+        margin: 0 auto 102px;
+        text-align: center;
+        @include m {
+            margin-bottom: 64px; }
+        .portfolio__status {
+            margin-bottom: 16px; } }
+    &__title {
+        margin-bottom: 8px; }
+    &__info {
+        @include body-1;
+        color: $neutrals4; }
+    &__gallery {
+        position: relative;
+        left: -5%;
+        max-width: 512px;
+        margin: 0 auto 108px;
+        pointer-events: none;
+        @include d {
+            max-width: 400px; }
+        @include m {
+            margin-bottom: 64px; }
+        @include s {
+            left: -11%;
+            max-width: 280px; } }
+    &__preview {
+        &:first-child {
+            position: relative;
+            z-index: 2; }
+        &:nth-child(2) {
+            top: 35.5%;
+            right: -19%;
+            z-index: 3;
+            width: 45%; }
+        &:nth-child(3) {
+            top: -12%;
+            right: -6%;
+            z-index: 1;
+            width: 43%; }
+        &:nth-child(4) {
+            left: 11%;
+            bottom: 14%;
+            z-index: 3;
+            width: 18%; }
+        &:not(:first-child) {
+            position: absolute; }
+        img {
+            width: 100%; } }
+    &__row {
+        display: flex;
+        align-items: flex-start;
+        @include t {
+            display: block; } }
+    &__trainer {
+        flex: 0 0 256px;
+        padding: 24px;
+        border-radius: 24px;
+        border: 1px solid $neutrals6;
+        text-align: center;
+        @include d {
+            flex: 0 0 220px; }
+        @include t {
+            margin-bottom: 32px; }
+        @include dark {
+            background: $neutrals2;
+            border-color: $neutrals3; }
+        .portfolio__status {
+            margin-bottom: 32px; } }
+    &__avatar {
+        width: 128px;
+        height: 128px;
+        margin: 0 auto 32px;
+        background: $neutrals6;
+        border-radius: 50%;
+        overflow: hidden;
+        @include dark {
+            background: $neutrals3; }
+        img {
+            width: 100%;
+            min-height: 100%; } }
+    &__man {
+        margin-bottom: 4px;
+        font-weight: 600; }
+    &__position {
+        @include caption-1;
+        color: $neutrals4; }
+    &__wrap {
+        flex-grow: 1;
+        padding: 7px 64px 0 32px;
+        @include x {
+            padding: 0 32px; }
+        @include t {
+            margin-bottom: 32px;
+            padding: 0; } }
+    &__item {
+        display: flex;
+        @include caption-1;
+        font-weight: 500;
+        &:not(:last-child) {
+            margin-bottom: 20px; } }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 20px;
+        height: 24px;
+        margin-right: 12px;
+        .icon {
+            width: 16px;
+            height: 16px;
+            fill: $neutrals4;
+            &-scoreboard {
+                width: 20px;
+                height: 20px; }
+            &-candlesticks {
+                width: 18px;
+                height: 18px; } } }
+    &__parameter {
+        flex: 0 0 156px;
+        padding-right: 16px;
+        color: $neutrals4; }
+    &__note {
+        margin-top: 32px;
+        padding-top: 32px;
+        border-top: 1px solid $neutrals6;
+        color: $neutrals3;
+        @include dark {
+            border-color: $neutrals3;
+            color: $neutrals6; } }
+    &__details {
+        flex: 0 0 416px;
+        padding-left: 64px;
+        border-left: 1px solid $neutrals6;
+        @include x {
+            flex: 0 0 350px;
+            padding: 0;
+            border: none; }
+        @include d {
+            flex: 0 0 272px; }
+        @include dark {
+            border-color: $neutrals3; } }
+    &__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 42px;
+        @include body-2;
+        .icon {
+            position: relative;
+            bottom: -1px;
+            width: 22px;
+            height: 22px;
+            margin-right: 14px;
+            @include dark {
+                fill: $neutrals8; } } }
+    &__control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 48px;
+        margin-bottom: 20px;
+        padding: 0 8px;
+        border-radius: 24px;
+        background: $neutrals2;
+        @include dark {
+            background: $neutrals8; } }
+    &__date {
+        padding: 0 10px;
+        text-align: center;
+        @include button-1;
+        color: $neutrals8;
+        @include dark {
+            color: $neutrals2; } }
+    &__prev,
+    &__next {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        background: none;
+        .icon {
+            width: 14px;
+            height: 14px;
+            fill: $neutrals8;
+            transition: transform .2s;
+            @include dark {
+                fill: $neutrals2; } } }
+    &__prev {
+        &:hover {
+            .icon {
+                transform: translateX(-2px); } } }
+    &__next {
+        &:hover {
+            .icon {
+                transform: translateX(2px); } } }
+    &__variants {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -8px 0 20px -8px; }
+    &__variant {
+        margin: 8px 0 0 8px;
+        padding: 0 25px;
+        background: none;
+        line-height: 48px;
+        border-radius: 24px;
+        box-shadow: inset 0 0 0 2px $neutrals6;
+        @include sf-pro-display;
+        font-size: 16px;
+        transition: background .2s;
+        &:hover {
+            background: $neutrals6; }
+        @include dark {
+            box-shadow: inset 0 0 0 2px $neutrals4;
+            color: $neutrals8;
+            &:hover {
+                background: $neutrals4; } } }
+    &__btns {
+        display: flex;
+        .portfolio__button {
+            &:first-child {
+                margin-right: 12px; }
+            &:nth-child(2) {
+                flex-grow: 1; } } } }

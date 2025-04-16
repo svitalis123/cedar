@@ -1,0 +1,53 @@
+.quality {
+    &__list {
+        display: flex;
+        margin: 0 -16px;
+        @include t {
+            flex-wrap: wrap;
+            margin: -64px -16px 0; }
+        @include m {
+            display: block;
+            margin: 0; } }
+    &__item {
+        position: relative;
+        flex: 0 0 calc(25% - 32px);
+        width: calc(25% - 32px);
+        margin: 0 16px;
+        @include t {
+            flex: 0 0 calc(50% - 32px);
+            width: calc(50% - 32px);
+            margin: 64px 16px 0; }
+        @include m {
+            width: 100%;
+            margin: 0;
+            &:not(:last-child) {
+                margin-bottom: 64px; } } }
+    &__preview {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 64px;
+        @include t {
+            margin-bottom: 48px; }
+        @include m {
+            margin-bottom: 32px; }
+        img {
+            max-width: 100%; } }
+    &__counter {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $neutrals6;
+        @include sf-pro-display;
+        font-size: 64px;
+        line-height: 1;
+        font-weight: 700;
+        @include dark {
+            border-color: $neutrals3; } }
+    &__title {
+        margin-bottom: 16px;
+        font-weight: 600; }
+    &__content {
+        @include caption-1;
+        color: $neutrals4; } }

@@ -1,0 +1,85 @@
+.lifestyle {
+    @include m {
+        padding-top: 64px; }
+    &__head {
+        max-width: 545px;
+        margin-bottom: 80px;
+        @include m {
+            margin-bottom: 48px; } }
+    &__stage {
+        margin-bottom: 32px; }
+    &__title {
+        margin-bottom: 20px; }
+    &__info {
+        margin-bottom: 24px;
+        @include body-1;
+        color: $neutrals4; }
+    &__button {
+        @include m {
+            width: 100%; } }
+    &__wrap {
+        @include m {
+            margin: 0 -12px; } }
+    &__slider {
+        @include m {
+            padding-bottom: 70px;
+            visibility: hidden;
+            &.slick-initialized {
+                visibility: visible; } } }
+    &__row {
+        display: flex;
+        align-items: center;
+        margin: 0 -16px;
+        @include m {
+            display: flex !important;
+            flex-direction: column-reverse;
+            margin: 0; }
+        &:not(:last-child) {
+            margin-bottom: 112px;
+            @include t {
+                margin-bottom: 80px; }
+            @include m {
+                margin-bottom: 0; } } }
+    &__col {
+        flex: 0 0 calc(50% - 32px);
+        width: calc(50% - 32px);
+        margin: 0 16px;
+        @include m {
+            flex: 0 0 100%;
+            width: 100%; }
+        img {
+            width: 100%;
+            border-radius: 24px; }
+        &:first-child {
+            padding-top: 32px;
+            @include d {
+                padding-top: 0; }
+            @include m {
+                margin-top: 48px; } } }
+    &__details {
+        max-width: 260px;
+        @include m {
+            max-width: 100%; } }
+    &__number {
+        margin-bottom: 24px;
+        padding-bottom: 26px;
+        border-bottom: 2px solid $neutrals6;
+        @include sf-pro-display;
+        font-size: 32px;
+        line-height: (40/32);
+        @include dark {
+            border-color: $neutrals3; } }
+    &__category {
+        margin-bottom: 16px;
+        font-weight: 600; }
+    &__content {
+        @include caption-1;
+        color: $neutrals4; }
+    .slick-slide {
+        padding: 0 12px; }
+    .slick-arrow {
+        bottom: 0; }
+    .slick-prev {
+        left: 12px; }
+    .slick-next {
+        left: 56px; } }

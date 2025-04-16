@@ -1,0 +1,122 @@
+.about {
+    position: relative;
+    @include m {
+        padding: 48px 0;
+        border: none; }
+    &__row {
+        display: flex;
+        margin: 0 -12px;
+        @include d {
+            margin: 0; }
+        &:first-child {
+            @include m {
+                display: block; } }
+        &:nth-child(2) {
+            @include m {
+                flex-direction: column-reverse;
+                .about__col {
+                    &:nth-child(2) {
+                        margin-bottom: 60px; } } } }
+        &:not(:last-child) {
+            margin-bottom: 128px;
+            @include d {
+                margin-bottom: 80px; }
+            @include m {
+                margin-bottom: 60px; } } }
+    &__col {
+        flex: 0 0 calc(50% - 24px);
+        width: calc(50% - 24px);
+        margin: 0 12px;
+        @include d {
+            margin: 0; }
+        &:first-child {
+            @include d {
+                flex: 1 0 auto;
+                width: auto;
+                padding-right: 32px; }
+            @include m {
+                flex: 0 0 100%;
+                width: 100%;
+                padding: 0; } }
+        &:nth-child(2) {
+            @include d {
+                flex: 0 0 528px;
+                width: 528px; }
+            @include t {
+                flex: 0 0 400px;
+                width: 400px; }
+            @include m {
+                flex: 0 0 100%;
+                width: 100%; } } }
+    &__title {
+        margin-bottom: 20px; }
+    &__info {
+        max-width: 450px;
+        color: $neutrals4; }
+    &__list {
+        max-width: 260px;
+        @include m {
+            max-width: 100%; } }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 48px;
+            @include t {
+                margin-bottom: 32px; } } }
+    &__number {
+        display: inline-block;
+        width: 38px;
+        margin-bottom: 24px;
+        border-radius: 12px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $neutrals8;
+        @include t {
+            margin-bottom: 16px; }
+        @include m {
+            margin-bottom: 24px; } }
+    &__subtitle {
+        margin-bottom: 16px;
+        font-weight: 500;
+        @include t {
+            margin-bottom: 12px; }
+        @include m {
+            margin-bottom: 16px; } }
+    &__content {
+        @include caption-1;
+        color: $neutrals4; }
+    &__bg {
+        position: relative;
+        background: $neutrals6;
+        border-radius: 24px;
+        @include dark {
+            background: $neutrals3; }
+        img {
+            width: 100%; }
+        & > img {
+            border-radius: 24px; }
+        &_overflow {
+            @include d {
+                overflow: hidden; } } }
+    &__preview {
+        position: absolute;
+        top: 1.5%;
+        left: -31%;
+        width: 64.5%;
+        pointer-events: none;
+        @include d {
+            top: 0;
+            left: 0;
+            width: 45%; } }
+    &__photo {
+        position: absolute;
+        pointer-events: none;
+        &:first-child {
+            top: 11%;
+            left: -31%;
+            width: 68%; }
+        &:nth-child(2) {
+            top: 9.5%;
+            left: 25%;
+            width: 23%; } } }

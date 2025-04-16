@@ -1,0 +1,111 @@
+.history {
+    margin-bottom: 72px;
+    @include d {
+        margin-bottom: 64px; }
+    @include m {
+        margin-bottom: 32px; }
+    &__slider {
+        visibility: hidden;
+        &.slick-initialized {
+            visibility: visible; } }
+    &__item {
+        display: flex;
+        border-radius: 20px;
+        box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1);
+        border: 1px solid $neutrals6;
+        @include m {
+            display: block;
+            border-radius: 24px; }
+        @include dark {
+            border-color: $neutrals3;
+            background: $neutrals2; } }
+    &__preview,
+    &__details {
+        flex: 0 0 50%; }
+    &__preview {
+        min-height: 516px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        border-radius: 20px 0 0 20px;
+        @include m {
+            min-height: 232px;
+            border-radius: 24px 24px 0 0; } }
+    &__details {
+        padding: 64px 96px;
+        @include x {
+            padding: 64px; }
+        @include d {
+            padding: 56px; }
+        @include t {
+            padding: 48px 32px; }
+        @include m {
+            padding: 40px 16px; } }
+    &__status {
+        margin-bottom: 20px;
+        padding: 0 12px; }
+    &__title {
+        margin-bottom: 20px;
+        @include sf-pro-display;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -.01em;
+        @include t {
+            font-size: 32px; }
+        @include m {
+            margin-bottom: 16px;
+            font-size: 24px;
+            letter-spacing: 0; } }
+    &__content {
+        margin-bottom: 20px;
+        color: $neutrals4;
+        @include m {
+            margin-bottom: 16px; } }
+    .slick-list {
+        overflow: visible; }
+    .slick-slide {
+        opacity: 0;
+        transition: opacity .4s;
+        &.slick-active {
+            opacity: 1; } }
+    .slick-dots {
+        position: absolute;
+        left: 0;
+        bottom: 47px;
+        display: flex !important;
+        justify-content: center;
+        width: 50%;
+        font-size: 0;
+        @include m {
+            top: 176px;
+            bottom: auto;
+            width: 100%; }
+        li {
+            button {
+                position: relative;
+                width: 8px;
+                height: 8px;
+                background: none;
+                font-size: 0;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: $neutrals8;
+                    border-radius: 50%;
+                    opacity: .7;
+                    transform: scale(.5);
+                    transition: all .2s; }
+                &:hover {
+                    &:before {
+                        opacity: 1; } } }
+            &.slick-active {
+                button {
+                    &:before {
+                        opacity: 1;
+                        transform: scale(1); } } }
+            &:not(:last-child) {
+                margin-right: 8px; } } } }

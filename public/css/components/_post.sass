@@ -1,0 +1,130 @@
+.post {
+    overflow: hidden;
+    &__title {
+        margin-bottom: 20px;
+        text-align: center; }
+    &__info {
+        max-width: 455px;
+        margin: 0 auto 80px;
+        text-align: center;
+        color: $neutrals3;
+        @include d {
+            margin-bottom: 64px; }
+        @include m {
+            margin-bottom: 32px; }
+        @include dark {
+            color: $neutrals6; } }
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: -12px -6px 80px;
+        @include d {
+            margin-bottom: 64px; }
+        @include m {
+            margin-bottom: 32px; } }
+
+    &__link {
+        margin: 12px 6px 0;
+        padding: 6px 12px;
+        border-radius: 14px;
+        background: none;
+        @include button-2;
+        color: $neutrals4;
+        transition: all .2s;
+        &:hover {
+            color: $neutrals3;
+            @include dark {
+                color: $neutrals6; } }
+        &.active {
+            background: $neutrals3;
+            color: $neutrals8;
+            @include dark {
+                background: $neutrals8;
+                color: $neutrals2; } } }
+    &__box {
+        display: none;
+        &:first-child {
+            display: block; } }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -64px -16px 0;
+        @include m {
+            display: block;
+            margin: 0; } }
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 0 0 calc(33.333% - 32px);
+        width: calc(33.333% - 32px);
+        margin: 64px 16px 0;
+        padding-bottom: 40px;
+        border-bottom: 2px solid $neutrals6;
+        color: $neutrals2;
+        @include d {
+            flex: 0 0 calc(50% - 32px);
+            width: calc(50% - 32px); }
+        @include m {
+            width: 100%;
+            margin: 0;
+            &:not(:last-child) {
+                margin-bottom: 64px; } }
+        @include dark {
+            border-color: $neutrals3;
+            color: $neutrals8; }
+        &:hover {
+            .post__preview {
+                box-shadow: 0 0 0 3px $red;
+                img {
+                    transform: scale(1.1);
+                    @include m {
+                        transform: scale(1); } } } } }
+    &__preview {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 32px;
+        border-radius: 16px;
+        transition: box-shadow .2s;
+        img {
+            width: 100%;
+            transition: transform 2s; } }
+    &__status {
+        margin-bottom: 16px; }
+    &__subtitle {
+        flex-grow: 1;
+        margin-bottom: 34px;
+        @include body-2; }
+    &__foot {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        @include caption-1;
+        font-weight: 500;
+        color: $neutrals4; }
+    &__user {
+        display: flex;
+        align-items: center;
+        margin-right: auto; }
+    &__avatar {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        border-radius: 50%;
+        background: $neutrals6;
+        overflow: hidden;
+        @include dark {
+            background: $neutrals3; }
+        img {
+            width: 100%;
+            min-height: 100%; } }
+    &__btns {
+        margin-top: 80px;
+        text-align: center;
+        @include d {
+            margin-top: 64px; }
+        @include m {
+            margin-top: 32px; } } }

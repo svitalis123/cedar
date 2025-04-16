@@ -1,0 +1,124 @@
+.team {
+    @include d {
+        padding-top: 112px; }
+    @include t {
+        padding-top: 64px; }
+    &__head {
+        margin-bottom: 80px;
+        text-align: center;
+        @include m {
+            margin-bottom: 48px; } }
+    &__title {
+        margin-bottom: 20px; }
+    &__info {
+        max-width: 545px;
+        margin: 0 auto 40px;
+        color: $neutrals3;
+        @include dark {
+            color: $neutrals6; } }
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: -12px -6px 0;
+        @include m {
+            display: none; } }
+    .select {
+        display: none;
+        @include m {
+            display: block; } }
+    &__link {
+        margin: 12px 6px 0;
+        padding: 6px 12px;
+        border-radius: 14px;
+        background: none;
+        @include button-2;
+        color: $neutrals4;
+        transition: all .2s;
+        &:hover {
+            color: $neutrals3;
+            @include dark {
+                color: $neutrals6; } }
+        &.active {
+            background: $neutrals3;
+            color: $neutrals8;
+            @include dark {
+                background: $neutrals8;
+                color: $neutrals2; } } }
+    &__box {
+        display: none; }
+    &__wrap {
+        @include m {
+            position: relative;
+            padding-bottom: 72px; } }
+    &__slider {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -60px -16px 0;
+        @include m {
+            position: static;
+            display: block;
+            margin: 0;
+            visibility: hidden;
+            &.slick-initialized {
+                visibility: visible; } } }
+    &__slide {
+        flex: 0 0 calc(33.333% - 32px);
+        width: calc(33.333% - 32px);
+        margin: 60px 16px 0;
+        @include m {
+            width: auto;
+            margin: 0; } }
+    &__item {
+        display: block;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        color: $neutrals2;
+        &:hover {
+            .team__avatar {
+                box-shadow: 0 0 0 2px $red;
+                @include m {
+                    box-shadow: none; } } }
+        @include dark {
+            color: $neutrals8; } }
+    &__avatar {
+        position: relative;
+        width: 160px;
+        margin: 0 auto 24px;
+        border-radius: 16px;
+        overflow: hidden;
+        background: $neutrals6;
+        transition: box-shadow .2s;
+        @include dark {
+            background: $neutrals3; }
+        &:before {
+            content: '';
+            display: block;
+            padding-bottom: 100%; }
+        @include m {
+            width: 100%; }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; } }
+    &__man {
+        margin-bottom: 4px;
+        font-weight: 500; }
+    &__position {
+        @include caption-1;
+        color: $neutrals4; }
+    .slick-list {
+        @include s {
+            margin: 0 -192px 0 -8px; } }
+    .slick-slide {
+        padding: 0 8px; }
+    .slick-arrow {
+        bottom: 0; }
+    .slick-prev {
+        left: calc(50% - 34px); }
+    .slick-next {
+        right: calc(50% - 34px); } }

@@ -1,0 +1,55 @@
+.interesting {
+    overflow: hidden;
+    &__wrapper {
+        position: relative; }
+    &__slider {
+        position: static;
+        visibility: hidden;
+        @include m {
+            position: relative;
+            padding-top: 72px; }
+        &.slick-initialized {
+            visibility: visible; } }
+    &__title {
+        margin-bottom: 64px;
+        @include m {
+            margin-bottom: 24px;
+            text-align: center; } }
+    &__wrap {
+        margin: 0 -16px; }
+    .card {
+        height: 100%; }
+    &__btns {
+        margin-top: 64px;
+        text-align: center;
+        @include m {
+            margin-top: 48px; } }
+    .slick-list {
+        overflow: visible; }
+    .slick-track {
+        display: flex; }
+    .slick-slide {
+        height: auto;
+        padding: 0 16px;
+        opacity: 0;
+        transition: opacity .4s;
+        &.slick-active {
+            opacity: 1; }
+        & > div {
+            display: flex;
+            height: 100%;
+            flex-grow: 1; } }
+    .slick-arrow {
+        top: 16px;
+        @include m {
+            top: 0; } }
+    .slick-prev {
+        right: 44px;
+        @include m {
+            right: auto;
+            left: calc(50% - 34px); } }
+    .slick-next {
+        right: 0;
+        @include m {
+            right: calc(50% - 34px); } } }
+
