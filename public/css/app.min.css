@@ -2844,7 +2844,7 @@ body.dark .select .option.selected.focus {
 }
 
 [class^="section"] {
-    padding: 136px 0;
+    padding: 28px 0;
 }
 
 @media only screen and (max-width: 1179px) {
@@ -4619,8 +4619,8 @@ body.dark .header__social:hover .icon {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 880px;
-    padding: 34px 0 130px;
+    min-height: 680px;
+    padding: 34px 0 12px;
 }
 
 @media only screen and (max-width: 1339px) {
@@ -4700,6 +4700,7 @@ body.dark .header__social:hover .icon {
 
 .main .scroll {
     position: absolute;
+    right: 100px;
     bottom: 96px;
 }
 
