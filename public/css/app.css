@@ -2340,13 +2340,13 @@ body.dark .select .option.selected.focus {
 
 @media only screen and (max-width: 1179px) {
     [class^="section"] {
-        padding: 112px 0;
+        padding: 40px 0;
     }
 }
 
 @media only screen and (max-width: 767px) {
     [class^="section"] {
-        padding: 64px 0;
+        padding: 28px 0;
     }
 }
 
@@ -2417,7 +2417,7 @@ body.dark .section-border-top {
     align-items: center;
     height: 48px;
     padding: 0 24px;
-    background: #FF592C;
+    background: #e5c100;
     border-radius: 24px;
     font-family: 'SFProDisplay-Bold';
     font-size: 16px;
@@ -2429,7 +2429,7 @@ body.dark .section-border-top {
 }
 
 [class^="button"]:hover {
-    background: #f83500;
+    background: #e5c100;
 }
 
 [class^="button"].disabled {
@@ -2671,7 +2671,7 @@ body.dark .button-circle-stroke:hover {
 }
 
 .status-red {
-    background: #FF592C;
+    background: #e5c100;
 }
 
 .status-green {
@@ -2701,8 +2701,8 @@ body.dark .status-black {
 }
 
 .status-stroke-red {
-    box-shadow: inset 0 0 0 2px #FF592C;
-    color: #FF592C;
+    box-shadow: inset 0 0 0 2px #e5c100;
+    color: #e5c100;
 }
 
 .status-stroke-green {
@@ -3063,7 +3063,7 @@ body.dark .header__link:hover {
 
 @media only screen and (max-width: 767px) {
     .header__link.active {
-        box-shadow: inset 2px 0 0 0 #FF592C;
+        box-shadow: inset 2px 0 0 0 #e5c100;
     }
 }
 
@@ -3162,7 +3162,7 @@ body.dark .header__dropdown.active .header__head {
 @media only screen and (max-width: 767px) {
     .header__dropdown.open .header__head,
     .header__dropdown.active .header__head {
-        box-shadow: inset 2px 0 0 0 #FF592C;
+        box-shadow: inset 2px 0 0 0 #e5c100;
     }
 }
 
@@ -3470,7 +3470,7 @@ body.dark .header__item {
 
 .header__card:hover .header__photo,
 .header__item:hover .header__photo {
-    box-shadow: 0 0 0 3px #FF592C;
+    box-shadow: 0 0 0 3px #e5c100;
 }
 
 .header__card:hover .header__photo img,
@@ -3833,6 +3833,13 @@ body.dark .header__social:hover .icon {
     padding: 34px 0 130px;
 }
 
+.main_override {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 34px 0 40px;
+}
+
 @media only screen and (max-width: 1339px) {
     .main {
         min-height: 800px;
@@ -3856,6 +3863,12 @@ body.dark .header__social:hover .icon {
     position: relative;
     z-index: 3;
     max-width: 450px;
+}
+
+.main_wrap_override {
+    position: relative;
+    padding: 24px 0px;
+    z-index: 3;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -5492,7 +5505,7 @@ body.dark .team__link.active {
 }
 
 .team__item:hover .team__avatar {
-    box-shadow: 0 0 0 2px #FF592C;
+    box-shadow: 0 0 0 2px #e5c100;
 }
 
 @media only screen and (max-width: 767px) {
@@ -5974,7 +5987,7 @@ body.dark .advantages__info {
 
 .workouts__preview:nth-child(2) {
     top: 10%;
-    left: 47%;
+    left: 57%;
     z-index: 2;
     width: 13.5%;
 }
@@ -6165,7 +6178,7 @@ body.dark .subscription__input:focus {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #FF592C;
+    background: #e5c100;
     transition: background .2s;
 }
 
@@ -6176,7 +6189,7 @@ body.dark .subscription__input:focus {
 }
 
 .subscription__btn:hover {
-    background: #f83500;
+    background: #e5c100;
 }
 
 .footer {
@@ -6309,7 +6322,6 @@ body.dark .footer__col:nth-child(3) {
 
 .footer__logo {
     display: inline-block;
-    width: 32px;
     margin-bottom: auto;
     overflow: hidden;
 }
@@ -7046,7 +7058,7 @@ body.dark .faq__info {
 
 .faq__info a {
     font-weight: 600;
-    color: #FF592C;
+    color: #e5c100;
     transition: opacity .2s;
 }
 
@@ -8080,7 +8092,7 @@ body.dark .platform__item {
 
 .community__note a {
     font-weight: 600;
-    color: #FF592C;
+    color: #e5c100;
     transition: opacity .2s;
 }
 
@@ -8556,7 +8568,7 @@ body.dark .post__item {
 }
 
 .post__item:hover .post__preview {
-    box-shadow: 0 0 0 3px #FF592C;
+    box-shadow: 0 0 0 3px #e5c100;
 }
 
 .post__item:hover .post__preview img {
@@ -8892,7 +8904,7 @@ body.dark .card {
 }
 
 .card:hover .card__preview {
-    box-shadow: 0 0 0 3px #FF592C;
+    box-shadow: 0 0 0 3px #e5c100;
 }
 
 .card:hover .card__preview img {
@@ -9102,7 +9114,7 @@ body.dark .catalog__input {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #FF592C;
+    background: #e5c100;
     transition: background .2s;
 }
 
@@ -9113,7 +9125,7 @@ body.dark .catalog__input {
 }
 
 .catalog__result:hover {
-    background: #f83500;
+    background: #e5c100;
 }
 
 .catalog__wrap {
@@ -9232,7 +9244,7 @@ body.dark .catalog__link.active {
     padding: 0 0 0 24px;
     flex-shrink: 0;
     border-radius: 24px;
-    background: #FF592C;
+    background: #e5c100;
     font-family: 'SFProDisplay-Bold';
     font-size: 16px;
     line-height: 48px;
@@ -9636,12 +9648,12 @@ body.dark .description__list {
 }
 
 .description .slick-dots li button:hover {
-    border-color: #FF592C;
+    border-color: #e5c100;
 }
 
 .description .slick-dots li.slick-active button {
-    background: #FF592C;
-    border-color: #FF592C;
+    background: #e5c100;
+    border-color: #e5c100;
 }
 
 .description .slick-dots li:not(:last-child) {
@@ -9872,14 +9884,14 @@ body.dark .programs__black {
 }
 
 .programs__item:hover .programs__button {
-    background: #FF592C;
-    box-shadow: 0 0 0 2px #FF592C inset;
+    background: #e5c100;
+    box-shadow: 0 0 0 2px #e5c100 inset;
     color: #FCFCFD;
 }
 
 .programs__item:hover .programs__button:hover {
-    background: #f83500;
-    box-shadow: 0 0 0 2px #f83500 inset;
+    background: #e5c100;
+    box-shadow: 0 0 0 2px #e5c100 inset;
     color: #FCFCFD;
 }
 
@@ -10753,7 +10765,7 @@ body.dark .trainer__item {
 }
 
 .trainer__item:hover .trainer__preview {
-    box-shadow: 0 0 0 2px #FF592C;
+    box-shadow: 0 0 0 2px #e5c100;
 }
 
 .trainer__item:hover .trainer__preview img {
