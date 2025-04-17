@@ -403,7 +403,7 @@ import Layout from "../../layouts/Layout.astro";
               <div class="about__preview" data-aos="animation-translate-up">
                 <img src="/img/content/plate.png" alt="Plate" />
               </div>
-              <button class="play">
+              <button class="play" aria-label="Play video">
                 <svg class="icon icon-play">
                   <use xlink:href="#icon-play"></use>
                 </svg>
@@ -788,6 +788,220 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </div>
   <!-- footer-->
+   <!-- video poup -->
+  <div id="videoPopup" class="video-popup hidden" role="dialog" aria-modal="true" aria-labelledby="videoPopupTitle">
+    <div class="video-popup-overlay" tabindex="-1" data-close-popup></div>
+    <div class="video-popup-content">
+      <button class="video-popup-close" aria-label="Close video popup" data-close-popup>×</button>
+      <h2 id="videoPopupTitle" class="visually-hidden">Academy Video</h2>
+      <video id="popupVideoPlayer" controls preload="metadata">
+        <source src="/video/cedar.mp4" type="video/mp4">
+        Your browser does not support the video tag. Please update your browser.
+      </video>
+    </div>
+  </div>
+  <!-- **** END VIDEO POPUP HTML **** -->
+
+
+  <!-- ... (Your existing #popup-trainer popup) ... -->
+  <div class="popup popup_trainer mfp-hide" id="popup-trainer">
+     <!-- ... -->
+  </div>
 </div>
 
-<!-- svg sprite-->
+
+<!-- **** START VIDEO POPUP STYLES **** -->
+<style is:global>
+    .video-popup {
+      position: fixed;
+      inset: 0; /* A shorthand for top, right, bottom, left = 0 */
+      z-index: 1050; /* Ensure it's above most content, adjust if needed */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      /* Start hidden */
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    .video-popup:not(.hidden) {
+       /* Become visible */
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .video-popup-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+      cursor: pointer;
+    }
+  
+    .video-popup-content {
+      position: relative; /* For positioning the close button */
+      background-color: #000; /* Black background is common for video */
+      padding: 10px; /* Small padding around the video */
+      border-radius: 8px;
+      max-width: 90vw; /* Max width relative to viewport width */
+      max-height: 90vh; /* Max height relative to viewport height */
+      z-index: 1051; /* Above overlay */
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      display: flex; /* Helps contain the video */
+    }
+  
+    .video-popup-content video {
+      display: block; /* Prevents extra space below */
+      max-width: 100%;
+      max-height: calc(90vh - 20px); /* Consider popup padding */
+      height: auto; /* Maintain aspect ratio */
+      width: auto; /* Maintain aspect ratio */
+    }
+  
+    .video-popup-close {
+      position: absolute;
+      top: -15px; /* Position slightly outside the top-right */
+      right: -15px;
+      width: 35px;
+      height: 35px;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 33px; /* Vertically center the 'x' */
+      text-align: center;
+      color: #333;
+      background-color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1052; /* Above content */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: background-color 0.2s ease;
+    }
+    .video-popup-close:hover,
+    .video-popup-close:focus {
+      background-color: #eee;
+      outline: none; /* Basic focus style, improve if needed */
+    }
+  
+    /* Visually hidden class for accessibility */
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+  
+    /* Make sure the original play button is styled appropriately */
+    .about__bg button.play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid white;
+      border-radius: 50%;
+      width: 70px; /* Adjust size as needed */
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      padding: 0; /* Remove default padding */
+      z-index: 10; /* Ensure it's above the image */
+    }
+  
+    .about__bg button.play:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  
+    .about__bg button.play .icon-play {
+      width: 25px; /* Adjust icon size */
+      height: 25px;
+      fill: white;
+      display: block; /* Ensure proper rendering */
+      margin-left: 5px; /* Nudge the play icon slightly right for visual centering */
+    }
+  
+  </style>
+  <!-- **** END VIDEO POPUP STYLES **** -->
+  
+  
+  <!-- **** START VIDEO POPUP SCRIPT **** -->
+  <script is:inline>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      // Select the elements
+      const playButton = document.querySelector('.about__bg .play'); // Make selector specific
+      const videoPopup = document.getElementById('videoPopup');
+      const videoPlayer = document.getElementById('popupVideoPlayer');
+      const closeTriggers = document.querySelectorAll('[data-close-popup]'); // Select close button and overlay
+  
+      // Check if all elements exist
+      if (!playButton) {
+          console.warn("Video play button (.about__bg .play) not found.");
+          return;
+      }
+      if (!videoPopup) {
+          console.error("Video popup container (#videoPopup) not found.");
+          return;
+      }
+       if (!videoPlayer) {
+          console.error("Video player element (#popupVideoPlayer) not found.");
+          return;
+      }
+       if (closeTriggers.length === 0) {
+          console.warn("Video popup close triggers ([data-close-popup]) not found.");
+          // You could still proceed but closing might not work
+      }
+  
+  
+      // Function to open the popup
+      const openPopup = () => {
+        if (videoPopup && videoPlayer) {
+          videoPopup.classList.remove('hidden');
+          videoPopup.focus(); // Focus the popup for accessibility
+          videoPlayer.play().catch(error => {
+            console.log("Autoplay was prevented by the browser:", error);
+            // Video will load but might not play automatically depending on browser policy
+          });
+        }
+      };
+  
+      // Function to close the popup
+      const closePopup = () => {
+        if (videoPopup && videoPlayer) {
+          videoPopup.classList.add('hidden');
+          videoPlayer.pause();
+          videoPlayer.currentTime = 0; // Reset video to the start
+          playButton?.focus(); // Return focus to the button that opened it
+        }
+      };
+  
+      // Event listener for the play button
+      playButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent any default button behavior
+        openPopup();
+      });
+  
+      // Event listeners for close triggers (button and overlay)
+      closeTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          closePopup();
+        });
+      });
+  
+      // Event listener for the Escape key
+      document.addEventListener('keydown', (event) => {
+        // Check if the popup is visible and the Escape key was pressed
+        if (event.key === 'Escape' && !videoPopup.classList.contains('hidden')) {
+          closePopup();
+        }
+      });
+    });
+  </script>
