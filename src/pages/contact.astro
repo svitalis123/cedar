@@ -1,78 +1,112 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <!-- outer-->
-    <div class="outer">
-        <!-- container-->
-        <div class="shooting-stars-container">
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
-            <div class="shooting-star"></div>
-        </div>
-            
-        <div class="section-border-top about" id="contact-form">
-            <div class="about__center center">
-                <div class="about__row">
-                    <div class="about__col">
-                        <div class="stage">CONTACT INFORMATION</div>
-                        <div class="about__info">
-                            <p><strong>CEDER Sports Academy</strong><br>
-                            Nairobi, Kenya</p>
-                            <p>
-                              <!-- +254 700 000 000<br> -->
-                            info@cedersports.com</p>
-                            <div class="about__subtitle">Office Hours</div>
-                            <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
-                            Saturday: 9:00 AM - 1:00 PM<br>
-                            Sunday: Closed</p>
-                        </div>
-                    </div>
-                    <div class="about__col">
-                        <div class="about__subtitle">Send us a message</div>
-                        <div class="about__info">Fill out the form below and we'll get back to you as soon as possible.</div>
-                        <form id="contactForm" class="contact-form" onsubmit="return submitForm(event)">
-                            <div class="form-group">
-                                <label for="name">Full Name*</label>
-                                <input type="text" id="name" name="name" required class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address*</label>
-                                <input type="email" id="email" name="email" required class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message*</label>
-                                <textarea id="message" name="message" rows="5" required class="form-control"></textarea>
-                            </div>
-                            <div class="form-submit">
-                                <button type="submit" class="button">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- outer-->
+  <div class="outer">
+    <!-- container-->
+    <div class="shooting-stars-container">
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
     </div>
+
+    <div class="section-border-top about" id="contact-form">
+      <div class="about__center center">
+        <div class="about__row">
+          <div class="about__col">
+            <div class="stage">CONTACT INFORMATION</div>
+            <div class="about__info">
+              <p>
+                <strong>CEDER Sports Academy</strong><br />
+                Nairobi, Kenya
+              </p>
+              <p>
+                <!-- +254 700 000 000<br> -->
+                cedersportsacademy@gmail.com
+              </p>
+              <div class="about__subtitle">Office Hours</div>
+              <p>
+                Monday - Friday: 8:00 AM - 5:00 PM<br />
+                Saturday: 9:00 AM - 1:00 PM<br />
+                Sunday: Closed
+              </p>
+            </div>
+          </div>
+          <div class="about__col">
+            <div class="about__subtitle">Send us a message</div>
+            <div class="about__info">
+              Fill out the form below and we'll get back to you as soon as
+              possible.
+            </div>
+            <form
+              id="contactForm"
+              class="contact-form"
+              onsubmit="return submitForm(event)"
+            >
+              <div class="form-group">
+                <label for="name">Full Name*</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address*</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message*</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="form-control"></textarea>
+              </div>
+              <div class="form-submit">
+                <button type="submit" class="button">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
 
 <style>
-.outer {
+  .outer {
     position: relative;
     overflow: hidden; /* Keep the shooting stars contained */
-}
+  }
 
-/* Shooting Stars Container and Animation */
-.shooting-stars-container {
+  /* Shooting Stars Container and Animation */
+  .shooting-stars-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -80,321 +114,334 @@ import Layout from "../layouts/Layout.astro"
     height: 100%;
     pointer-events: none; /* So it doesn't interfere with clicks */
     z-index: 1;
-}
+  }
 
-.shooting-star {
+  .shooting-star {
     position: absolute;
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: linear-gradient(to right, transparent, #FFD700); /* Gold color */
+    background: linear-gradient(
+      to right,
+      transparent,
+      #ffd700
+    ); /* Gold color */
     animation: shooting-star-animation 6s linear infinite;
     opacity: 0;
-    box-shadow: 0 0 3px #FFD700; /* Subtle glow */
-}
+    box-shadow: 0 0 3px #ffd700; /* Subtle glow */
+  }
 
-.shooting-star::before {
-    content: '';
+  .shooting-star::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100px; /* Length of the tail */
     height: 2px;
-    background: linear-gradient(to right, #FFD700, transparent);
+    background: linear-gradient(to right, #ffd700, transparent);
     transform: translateX(-100%);
-}
+  }
 
-/* Add subtle glitter effect */
-.shooting-star::after {
-    content: '';
+  /* Add subtle glitter effect */
+  .shooting-star::after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     background-color: rgba(255, 215, 0, 0.8);
     animation: glitter 1.5s ease-in-out infinite alternate;
-}
+  }
 
-.shooting-star:nth-child(1) {
+  .shooting-star:nth-child(1) {
     top: 10%;
     left: -10%;
     animation-delay: 0s;
-}
+  }
 
-.shooting-star:nth-child(2) {
+  .shooting-star:nth-child(2) {
     top: 20%;
     left: -10%;
     animation-delay: 1s;
-}
+  }
 
-.shooting-star:nth-child(3) {
+  .shooting-star:nth-child(3) {
     top: 35%;
     left: -10%;
     animation-delay: 2.5s;
-}
+  }
 
-.shooting-star:nth-child(4) {
+  .shooting-star:nth-child(4) {
     top: 50%;
     left: -10%;
     animation-delay: 4s;
-}
+  }
 
-.shooting-star:nth-child(5) {
+  .shooting-star:nth-child(5) {
     top: 65%;
     left: -10%;
     animation-delay: 5.5s;
-}
+  }
 
-.shooting-star:nth-child(6) {
+  .shooting-star:nth-child(6) {
     top: 75%;
     left: -10%;
     animation-delay: 7s;
-}
+  }
 
-.shooting-star:nth-child(7) {
+  .shooting-star:nth-child(7) {
     top: 85%;
     left: -10%;
     animation-delay: 8.5s;
-}
+  }
 
-.shooting-star:nth-child(8) {
+  .shooting-star:nth-child(8) {
     top: 90%;
     left: -10%;
     animation-delay: 10s;
-}
+  }
 
-@keyframes shooting-star-animation {
+  @keyframes shooting-star-animation {
     0% {
-        transform: translateX(0) translateY(0);
-        opacity: 0;
+      transform: translateX(0) translateY(0);
+      opacity: 0;
     }
     5% {
-        opacity: 1;
+      opacity: 1;
     }
     30% {
-        transform: translateX(calc(100vw + 200px)) translateY(30px);
-        opacity: 1;
+      transform: translateX(calc(100vw + 200px)) translateY(30px);
+      opacity: 1;
     }
     40% {
-        transform: translateX(calc(100vw + 300px)) translateY(60px);
-        opacity: 0;
+      transform: translateX(calc(100vw + 300px)) translateY(60px);
+      opacity: 0;
     }
     100% {
-        transform: translateX(calc(100vw + 300px)) translateY(60px);
-        opacity: 0;
+      transform: translateX(calc(100vw + 300px)) translateY(60px);
+      opacity: 0;
     }
-}
+  }
 
-/* Add subtle glitter animation */
-@keyframes glitter {
+  /* Add subtle glitter animation */
+  @keyframes glitter {
     0% {
-        opacity: 0.3;
-        transform: scale(0.8);
+      opacity: 0.3;
+      transform: scale(0.8);
     }
     50% {
-        opacity: 0.6;
+      opacity: 0.6;
     }
     100% {
-        opacity: 0.3;
-        transform: scale(1.2);
+      opacity: 0.3;
+      transform: scale(1.2);
     }
-}
+  }
 
-/* Gold pulse effect for form elements on focus */
-.form-control:focus {
-    border-color: #FFD700;
+  /* Gold pulse effect for form elements on focus */
+  .form-control:focus {
+    border-color: #ffd700;
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
     animation: gold-pulse 2s infinite;
-}
+  }
 
-@keyframes gold-pulse {
+  @keyframes gold-pulse {
     0% {
-        box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
     }
     50% {
-        box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
     }
     100% {
-        box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
     }
-}
+  }
 
-/* Gold button hover effect */
-.button {
+  /* Gold button hover effect */
+  .button {
     transition: all 0.3s ease;
-}
+  }
 
-.button:hover {
-    background-color: #FFD700;
+  .button:hover {
+    background-color: #ffd700;
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
-}
+  }
 
-/* Keep your original styles */
-.contact-form {
+  /* Keep your original styles */
+  .contact-form {
     margin-top: 2rem;
     position: relative;
     z-index: 2; /* Above the shooting stars */
-}
+  }
 
-.form-group {
+  .form-group {
     margin-bottom: 1.5rem;
-}
+  }
 
-.form-group label {
+  .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-}
+  }
 
-.form-control {
+  .form-control {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid #E6E8EC;
+    border: 1px solid #e6e8ec;
     border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
+    transition:
+      border-color 0.3s,
+      box-shadow 0.3s;
+  }
 
-textarea.form-control {
+  textarea.form-control {
     resize: vertical;
-}
+  }
 
-.form-submit {
+  .form-submit {
     margin-top: 2rem;
-}
+  }
 
-.form-submit button {
+  .form-submit button {
     padding: 0.75rem 2rem;
-}
+  }
 
-.social-links {
+  .social-links {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     margin-top: 2rem;
-}
+  }
 
-.social-link {
+  .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: #F4F5F6;
+    background-color: #f4f5f6;
     transition: background-color 0.3s;
-}
+  }
 
-.social-link:hover {
-    background-color: #E6E8EC;
-}
+  .social-link:hover {
+    background-color: #e6e8ec;
+  }
 
-.social-link svg {
+  .social-link svg {
     width: 20px;
     height: 20px;
-}
+  }
 
-/* Make sure content is above the shooting stars */
-.about__center {
+  /* Make sure content is above the shooting stars */
+  .about__center {
     position: relative;
     z-index: 2;
-}
+  }
 </style>
 
 <script is:inline>
-    function submitForm(event) {
-        event.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const message = document.getElementById('message').value;
-        
-        // Basic input validation
-        if (!name || !email || !message) {
-            alert('Please fill in all required fields');
-            return false;
-        }
-        
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return false;
-        }
-        
-        // Create email body with sanitized content
-        const emailSubject = encodeURIComponent('Contact Inquiry from ' + name);
-        const emailBody = encodeURIComponent(
-            'Name: ' + name + '\n' +
-            'Email: ' + email + '\n' +
-            'Phone: ' + phone + '\n\n' +
-            'Message:\n' + message
-        );
-        
-        // Add a success animation before opening email
-        const button = document.querySelector('.form-submit button');
-        button.innerHTML = "Message Sent!";
-        button.style.backgroundColor = "#FFD700";
-        button.style.boxShadow = "0 0 20px rgba(255, 215, 0, 0.9)";
-        
-        // Flash some gold particles around the form after submission
-        createSuccessParticles();
-        
-        setTimeout(() => {
-            // Open default email client with pre-filled data
-            window.location.href = `mailto:info@cedersports.com?subject=${emailSubject}&body=${emailBody}`;
-            
-            // Reset form after submission
-            document.getElementById('contactForm').reset();
-            button.innerHTML = "Send Message";
-            button.style.backgroundColor = "";
-            button.style.boxShadow = "";
-        }, 1000);
-        
-        return false;
+  function submitForm(event) {
+    event.preventDefault();
+
+    // Get form values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    // Basic input validation
+    if (!name || !email || !message) {
+      alert("Please fill in all required fields");
+      return false;
     }
-    
-    // Function to create gold particles on successful form submission
-    function createSuccessParticles() {
-        const formElement = document.getElementById('contactForm');
-        const rect = formElement.getBoundingClientRect();
-        
-        for (let i = 0; i < 30; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'success-particle';
-            particle.style.position = 'absolute';
-            particle.style.width = '8px';
-            particle.style.height = '8px';
-            particle.style.backgroundColor = '#FFD700';
-            particle.style.borderRadius = '50%';
-            particle.style.opacity = '0.8';
-            particle.style.zIndex = '5';
-            
-            // Random position around the form
-            const left = rect.left + Math.random() * rect.width;
-            const top = rect.top + Math.random() * rect.height;
-            particle.style.left = `${left}px`;
-            particle.style.top = `${top}px`;
-            
-            // Random animation duration
-            const duration = 1 + Math.random() * 2;
-            particle.style.animation = `particle-fade ${duration}s ease-out forwards`;
-            
-            document.body.appendChild(particle);
-            
-            // Clean up particles after animation
-            setTimeout(() => {
-                document.body.removeChild(particle);
-            }, duration * 1000);
-        }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address");
+      return false;
     }
-    
-    // Add this style for the particles animation
-    const style = document.createElement('style');
-    style.textContent = `
+
+    // Create email body with sanitized content
+    const emailSubject = encodeURIComponent("Contact Inquiry from " + name);
+    const emailBody = encodeURIComponent(
+      "Name: " +
+        name +
+        "\n" +
+        "Email: " +
+        email +
+        "\n" +
+        "Phone: " +
+        phone +
+        "\n\n" +
+        "Message:\n" +
+        message
+    );
+
+    // Add a success animation before opening email
+    const button = document.querySelector(".form-submit button");
+    button.innerHTML = "Message Sent!";
+    button.style.backgroundColor = "#FFD700";
+    button.style.boxShadow = "0 0 20px rgba(255, 215, 0, 0.9)";
+
+    // Flash some gold particles around the form after submission
+    createSuccessParticles();
+
+    setTimeout(() => {
+      // Open default email client with pre-filled data
+      window.location.href = `mailto:cedersportsacademy@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+      // Reset form after submission
+      document.getElementById("contactForm").reset();
+      button.innerHTML = "Send Message";
+      button.style.backgroundColor = "";
+      button.style.boxShadow = "";
+    }, 1000);
+
+    return false;
+  }
+
+  // Function to create gold particles on successful form submission
+  function createSuccessParticles() {
+    const formElement = document.getElementById("contactForm");
+    const rect = formElement.getBoundingClientRect();
+
+    for (let i = 0; i < 30; i++) {
+      const particle = document.createElement("div");
+      particle.className = "success-particle";
+      particle.style.position = "absolute";
+      particle.style.width = "8px";
+      particle.style.height = "8px";
+      particle.style.backgroundColor = "#FFD700";
+      particle.style.borderRadius = "50%";
+      particle.style.opacity = "0.8";
+      particle.style.zIndex = "5";
+
+      // Random position around the form
+      const left = rect.left + Math.random() * rect.width;
+      const top = rect.top + Math.random() * rect.height;
+      particle.style.left = `${left}px`;
+      particle.style.top = `${top}px`;
+
+      // Random animation duration
+      const duration = 1 + Math.random() * 2;
+      particle.style.animation = `particle-fade ${duration}s ease-out forwards`;
+
+      document.body.appendChild(particle);
+
+      // Clean up particles after animation
+      setTimeout(() => {
+        document.body.removeChild(particle);
+      }, duration * 1000);
+    }
+  }
+
+  // Add this style for the particles animation
+  const style = document.createElement("style");
+  style.textContent = `
         @keyframes particle-fade {
             0% {
                 transform: translate(0, 0) scale(1);
@@ -409,5 +456,5 @@ textarea.form-control {
             }
         }
     `;
-    document.head.appendChild(style);
+  document.head.appendChild(style);
 </script>

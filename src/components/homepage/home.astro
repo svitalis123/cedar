@@ -1,1007 +1,988 @@
----
-import Layout from "../../layouts/Layout.astro";
----
+  ---
+  import Layout from "../../layouts/Layout.astro";
+  ---
 
-<!-- outer-->
-<div class="outer">
-  <!-- header-->
-  <!-- container-->
-  <div class="outer__content">
-    <div class="main">
-      <div class="main__center center">
-        <div class="main__wrap">
-          <div class="stage">TRAIN. COMPETE. REPRESENT KENYA.</div>
-          <h1 class="main__title h1">
-            Kenya's Multi-Disciplinary Sports Academy
-          </h1>
-          <div class="main__text">
-            Empowering Kenyan athletes for success at national and international
-            levels
-          </div>
-          <div class="main__btns">
-            <a class="button main__button" href="/contact">Explore Programs</a
-            ><a class="button-stroke main__button" href="membership.html"
-              >Join Now</a>
-          </div>
-        </div>
-        <a class="scroll js-scroll" href="#steps">
-          <div class="scroll__line">
-            <svg class="icon icon-arrow-down">
-              <use xlink:href="#icon-arrow-down"></use>
-            </svg>
-            <svg class="icon icon-arrow-down">
-              <use xlink:href="#icon-arrow-down"></use>
-            </svg>
-          </div>
-        </a>
-        <div class="main__gallery">
-          <div
-            class="main__preview"
-            data-aos="animation-translate-up"
-            data-aos-anchor=".main__gallery"
-          >
-            <img
-              class="some-icon"
-              src="/img/content/avatar-8.png"
-              alt="Watch"
-            /><img
-              class="some-icon-dark"
-              src="/img/content/avatar-8.png"
-              alt="Watch"
-            />
-          </div>
-          <div
-            class="main__preview"
-            data-aos="animation-translate-up"
-            data-aos-delay="600"
-            data-aos-anchor=".main__gallery"
-          >
-            <img src="/img/content/ball.png" alt="Ball" />
-          </div>
-          <div
-            class="main__preview"
-            data-aos="animation-translate-up"
-            data-aos-delay="300"
-            data-aos-anchor=".main__gallery"
-          >
-            <img src="/img/content/bottle.png" alt="Bottle" />
-          </div>
-          <div
-            class="main__preview"
-            data-aos="animation-translate-up"
-            data-aos-delay="900"
-            data-aos-anchor=".main__gallery"
-          >
-            <img src="/img/content/ball-black.png" alt="Ball black" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="clients">
-                <div class="clients__center center">
-                    <div class="clients__title">Supported by top sports organizations</div>
-                    <div class="clients__list">
-                        <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/rotashow.svg" alt="Ministry of Youth Affairs"></div>
-                        <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/waves.svg" alt="Kenya Sports Federation"></div>
-                        <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/rotashow.svg" alt="National Olympic Committee"></div>
-                        <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/travelers.svg" alt="County Sports Associations"></div>
-                        <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/goldlines.svg" alt="International Rafting Federation"></div>
-                        <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/velocity9.svg" alt="Ministry of Sports"></div>
-                    </div>
-                </div>
-            </div> -->
-    <div class="section steps" id="steps">
-      <div class="steps__center center">
-        <div class="steps__head">
-          <h2 class="steps__title h2">Our Path to Excellence</h2>
-          <div class="steps__info">
-            A structured pathway for athletes of all levels, focused on
-            multi-disciplinary sports development in partnership with the
-            Ministry of Youth Affairs, Creative Economy and Sports.
-          </div>
-        </div>
-        <div class="steps__list">
-          <div class="steps__item" data-aos="animation-opacity">
-            <div class="steps__preview" style="background-color: #3772FF;">
-              <img src="/img/content/download.svg" alt="Step 1" />
+  <!-- outer-->
+  <div class="outer">
+    <!-- header-->
+    <!-- container-->
+    <div class="outer__content">
+      <div class="main">
+        <div class="main__center center">
+          <div class="main__wrap">
+            <div class="stage">TRAIN. COMPETE. REPRESENT KENYA.</div>
+            <h1 class="main__title h1">
+              Kenya's Multi-Disciplinary Sports Academy
+            </h1>
+            <div class="main__text">
+              Empowering Kenyan athletes for success at national and international
+              levels
             </div>
-            <div class="steps__number">Step 1</div>
-            <div class="steps__subtitle">Join</div>
-            <div class="steps__content">
-              Become a member of Kenya's premier sports academy.
+            <div class="main__btns">
+              <a class="button main__button" href="/contact">Explore Programs</a
+              ><a class="button-stroke main__button" href="membership.html"
+                >Join Now</a>
             </div>
           </div>
-          <div class="steps__item" data-aos="animation-opacity">
-            <div class="steps__preview" style="background-color: #9757D7;">
-              <img src="/img/content/whistle.svg" alt="Step 2" />
-            </div>
-            <div class="steps__number">Step 2</div>
-            <div class="steps__subtitle">Train</div>
-            <div class="steps__content">
-              Select your program and train with expert coaches.
-            </div>
-          </div>
-          <div class="steps__item" data-aos="animation-opacity">
-            <div class="steps__preview" style="background-color: #EF466F;">
-              <img src="/img/content/medal.svg" alt="Step 3" />
-            </div>
-            <div class="steps__number">Step 3</div>
-            <div class="steps__subtitle">Set Goals</div>
-            <div class="steps__content">
-              Aim for national and international competition.
-            </div>
-          </div>
-          <div class="steps__item" data-aos="animation-opacity">
-            <div class="steps__preview" style="background-color: #45B26B;">
-              <img src="/img/content/stopwatch.svg" alt="Step 4" />
-            </div>
-            <div class="steps__number">Step 4</div>
-            <div class="steps__subtitle">Compete</div>
-            <div class="steps__content">
-              Represent Kenya at competitions of all levels.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="intro" id="intro">
-      <div class="intro__center center">
-        <div class="intro__gallery">
-          <div
-            class="intro__preview"
-            data-aos="animation-translate-up"
-            data-aos-anchor=".intro__gallery"
-          >
-            <img src="/img/content/bag.png" alt="Bag" />
-          </div>
-          <div
-            class="intro__preview"
-            data-aos="animation-translate-up"
-            data-aos-delay="300"
-            data-aos-anchor=".intro__gallery"
-          >
-            <img src="/img/content/gloves.png" alt="Gloves" />
-          </div>
-          <div
-            class="intro__preview"
-            data-aos="animation-translate-up"
-            data-aos-delay="600"
-            data-aos-anchor=".intro__gallery"
-          >
-            <img src="/img/content/bottle-1.png" alt="Bottle" />
-          </div>
-        </div>
-        <div class="intro__wrap">
-          <h2 class="intro__title h1">Elite Training Programs</h2>
-          <div class="intro__text">
-            Developing top athletes in multiple sports disciplines who represent
-            Kenya on the international stage. 🏆
-          </div>
-          <a class="button intro__button" href="/contact">Start Your Journey</a>
-        </div>
-      </div>
-    </div>
-    <div class="section-bg book">
-      <div class="book__center center">
-        <div class="book__gallery">
-          <div class="book__preview">
-            <img
-              class="some-icon"
-              src="/img/content/programs.png"
-              alt="Book pic"
-            /><img
-              class="some-icon-dark"
-              src="/img/content/programs.png"
-              alt="Book pic"
-            />
-          </div>
-          <div
-            class="book__preview"
-            data-aos="animation-translate-up"
-            data-aos-anchor=".book__gallery"
-          >
-            <img src="/img/content/ball.png" alt="Ball" />
-          </div>
-          <div
-            class="book__preview"
-            data-aos="animation-translate-up"
-            data-aos-delay="300"
-            data-aos-anchor=".book__gallery"
-          >
-            <img src="/img/content/ball-green.png" alt="Ball" />
-          </div>
-          <div
-            class="book__preview"
-            data-aos="animation-translate-up"
-            data-aos-delay="600"
-            data-aos-anchor=".book__gallery"
-          >
-            <img src="/img/content/dumbbells.png" alt="Dumbbells" />
-          </div>
-        </div>
-        <div class="book__wrap">
-          <h2 class="book__title h2">Training Programs</h2>
-          <div class="book__info">
-            Choose from programs designed for all levels, with focus on
-            multi-disciplinary sports development.
-          </div>
-          <div class="book__list">
-            <div class="book__item">
-              <div class="book__icon" style="background-color: #45B26B;">
-                <img src="/img/content/user.svg" alt="User" />
-              </div>
-              <div class="book__details">
-                <div class="book__subtitle">Beginners</div>
-                <div class="book__content">
-                  Introduction to sports fundamentals and athletic development.
-                </div>
-              </div>
-            </div>
-            <div class="book__item">
-              <div class="book__icon" style="background-color: #9757D7;">
-                <img src="/img/content/medal-1.svg" alt="Medal" />
-              </div>
-              <div class="book__details">
-                <div class="book__subtitle">Advanced</div>
-                <div class="book__content">
-                  Competitive training for national and international events.
-                </div>
-              </div>
-            </div>
-            <div class="book__item">
-              <div class="book__icon" style="background-color: #3772FF;">
-                <img src="/img/content/lightning.svg" alt="Lightning" />
-              </div>
-              <div class="book__details">
-                <div class="book__subtitle">Elite</div>
-                <div class="book__content">
-                  Team Kenya preparation with personalized coaching.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="book__note">
-            <strong class="book__green">10% Discount</strong> for <strong
-              class="book__black"
-              >Ministry of Youth Affairs, Creative Economy and Sports</strong
-            > affiliated organizations and members
-          </div>
-          <div class="book__btns">
-            <a class="button book__button" href="/contact"
-              >Join a Program
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right"></use>
-              </svg></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section details">
-      <div class="details__center center">
-        <div class="details__head">
-          <div class="stage-small">Our Foundation</div>
-          <h2 class="details__title h2">Core Values</h2>
-        </div>
-        <div class="details__list">
-          <div class="details__item" data-aos="animation-opacity">
-            <div class="details__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="46"
-                viewBox="0 0 36 46"
-              >
-                <path
-                  fill="#23262f"
-                  fill-rule="evenodd"
-                  d="M24.292 0c5.947 0 9.815 6.259 7.155 11.578l-1.486 2.971C33.666 17.846 36 22.651 36 28c0 9.941-8.059 18-18 18S0 37.941 0 28c0-5.349 2.334-10.154 6.038-13.451l-1.485-2.971C1.893 6.259 5.761 0 11.708 0h12.584zM18 14c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14zm6.292-10H11.708C8.735 4 6.801 7.129 8.131 9.789l1.213 2.425A17.92 17.92 0 0 1 18 10a17.92 17.92 0 0 1 8.657 2.215l1.212-2.426C29.199 7.129 27.265 4 24.292 4z"
-                ></path>
+          <a class="scroll js-scroll" href="#steps">
+            <div class="scroll__line">
+              <svg class="icon icon-arrow-down">
+                <use xlink:href="#icon-arrow-down"></use>
+              </svg>
+              <svg class="icon icon-arrow-down">
+                <use xlink:href="#icon-arrow-down"></use>
               </svg>
             </div>
-            <div class="details__category">Integrity</div>
-            <div class="details__content">
-              Embracing good governance, transparency and clean sports free from
-              doping.
-            </div>
-          </div>
-          <div class="details__item" data-aos="animation-opacity">
-            <div class="details__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-              >
-                <path
-                  fill="#23262f"
-                  fill-rule="evenodd"
-                  d="M34.201 5.917l.05.05.336.35.019.02h0l.036.038.309.339.048.054h0l.018.021C38.119 10.314 40 14.937 40 20s-1.881 9.686-4.982 13.209l-.018.021-.048.055-.309.339-.038.041-.354.368-.05.05-.059.059c-.244.244-.495.482-.751.714l-.071.063-.385.335-.086.073a20.19 20.19 0 0 1-.783.625l-.066.05A19.91 19.91 0 0 1 20 40a19.92 19.92 0 0 1-12.849-4.673l-.086-.073-.384-.335-.071-.064a20.08 20.08 0 0 1-1.213-1.191 20.47 20.47 0 0 1-.395-.435l.357.394-.309-.339-.048-.054h0l-.019-.021C1.881 29.686 0 25.063 0 20s1.881-9.686 4.982-13.209l.019-.021.048-.055.308-.339.036-.038.019-.02c.386-.411.789-.806 1.208-1.183l.06-.054.389-.339.104-.088a19.99 19.99 0 0 1 .82-.651L8 3.999l.034-.025A19.91 19.91 0 0 1 20 0a19.91 19.91 0 0 1 12 3.998l.038.029a20.16 20.16 0 0 1 .788.627l.105.088.389.339.06.054a20.2 20.2 0 0 1 .762.723l.059.059h0zM20 4c-3.338 0-6.438 1.022-9.002 2.771C14.112 10.296 16 14.928 16 20s-1.888 9.704-5 13.229C13.562 34.978 16.662 36 20 36s6.438-1.022 9.002-2.771C25.888 29.704 24 25.072 24 20s1.888-9.704 5-13.229C26.438 5.022 23.338 4 20 4zM8 9.417l-.111.126C5.466 12.347 4 16.002 4 20a15.94 15.94 0 0 0 4 10.583c2.49-2.821 4-6.526 4-10.583A15.94 15.94 0 0 0 8 9.417zm24.001.001l-.108.122C29.467 12.344 28 16.001 28 20a15.94 15.94 0 0 0 3.999 10.582A15.93 15.93 0 0 0 36 20a15.94 15.94 0 0 0-3.999-10.582z"
-                ></path>
-              </svg>
-            </div>
-            <div class="details__category">Leadership</div>
-            <div class="details__content">
-              Providing honest & competent leadership with strategic
-              partnerships.
-            </div>
-          </div>
-          <div class="details__item" data-aos="animation-opacity">
-            <div class="details__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="38"
-                height="44"
-                viewBox="0 0 38 44"
-              >
-                <path
-                  fill="#23262f"
-                  fill-rule="evenodd"
-                  d="M18 8c9.941 0 18 8.059 18 18s-8.059 18-18 18S0 35.941 0 26 8.059 8 18 8zm0 4c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14zm0 4a2 2 0 0 1 2 2v8a2 2 0 1 1-4 0v-8a2 2 0 0 1 2-2zm14.586-9.414a2 2 0 0 1 2.828 0h0l2 2a2 2 0 0 1-2.828 2.828h0l-2-2a2 2 0 0 1 0-2.828zM22 0a2 2 0 1 1 0 4h0-8a2 2 0 1 1 0-4h0z"
-                ></path>
-              </svg>
-            </div>
-            <div class="details__category">Growth</div>
-            <div class="details__content">
-              Expanding Kenya's competitive talent pool across multiple sports.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section-border-top about">
-      <div class="about__center center">
-        <div class="about__row">
-          <div class="about__col">
-            <div class="stage">CEDER SPORTS ACADEMY</div>
-          </div>
-          <div class="about__col">
-            <h2 class="about__title h2">Athlete-centered approach</h2>
-            <div class="about__info">
-              Empowering Kenyan athletes to excel globally through
-              multi-disciplinary sports training.
-            </div>
-          </div>
-        </div>
-        <div class="about__row">
-          <div class="about__col">
-            <div class="about__list">
-              <div class="about__item" data-aos="animation-opacity">
-                <div class="about__number" style="background-color: #9757D7;">
-                  01
-                </div>
-                <div class="about__subtitle">Expert Coaching</div>
-                <div class="about__content">
-                  Train with Kenya's top multi-disciplinary sports
-                  professionals.
-                </div>
-              </div>
-              <div class="about__item" data-aos="animation-opacity">
-                <div class="about__number" style="background-color: #EF466F;">
-                  02
-                </div>
-                <div class="about__subtitle">Quality Facilities</div>
-                <div class="about__content">
-                  Access premier training venues across Kenya with funding from
-                  Sports and Arts Social Development Fund.
-                </div>
-              </div>
-              <div class="about__item" data-aos="animation-opacity">
-                <div class="about__number" style="background-color: #45B26B;">
-                  03
-                </div>
-                <div class="about__subtitle">International Focus</div>
-                <div class="about__content">
-                  Prepare for competition at the highest levels with Ministry
-                  support.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="about__col">
-            <div class="about__bg">
-              <img src="/img/content/runimage.png" alt="About pic" />
-              <div class="about__preview" data-aos="animation-translate-up">
-                <img src="/img/content/plate.png" alt="Plate" />
-              </div>
-              <button class="play" aria-label="Play video">
-                <svg class="icon icon-play">
-                  <use xlink:href="#icon-play"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- <div class="section review">
-                <div class="review__center center">
-                    <div class="review__wrap">
-                        <div class="review__slider js-slider-review">
-                            <div class="review__slide">
-                                <div class="review__item">
-                                    <div class="review__logo"><img src="/img/content/velocity9.svg" alt="Ministry of Youth Affairs"></div>
-                                    <div class="review__title">CEDER Sports Academy is creating pathways for Kenya's athletes to compete internationally.</div>
-                                    <div class="review__author">John Mwangi</div>
-                                    <div class="review__position">Ministry of Sports</div>
-                                </div>
-                            </div>
-                            <div class="review__slide">
-                                <div class="review__item">
-                                    <div class="review__logo"><img src="/img/content/travelers.svg" alt="International Rafting Federation"></div>
-                                    <div class="review__title">Kenya's structured approach to athlete development is impressive and promising.</div>
-                                    <div class="review__author">Sarah Johnson</div>
-                                    <div class="review__position">Int. Rafting Federation</div>
-                                </div>
-                            </div>
-                            <div class="review__slide">
-                                <div class="review__item">
-                                    <div class="review__logo"><img src="/img/content/goldlines.svg" alt="County Sports Association"></div>
-                                    <div class="review__title">Their programs are accessible, professional and results-driven.</div>
-                                    <div class="review__author">Robert Kosgei</div>
-                                    <div class="review__position">County Sports</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-    <div class="section events">
-      <div class="details__center center">
-        <div class="details__head">
-          <div class="stage-small">Competitions</div>
-          <h2 class="details__title h2">Event Calendar</h2>
-        </div>
-        <div class="details__list">
-          <div class="details__item" data-aos="animation-opacity">
-            <div class="details__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="46"
-                viewBox="0 0 36 46"
-              >
-                <path
-                  fill="#23262f"
-                  fill-rule="evenodd"
-                  d="M24.292 0c5.947 0 9.815 6.259 7.155 11.578l-1.486 2.971C33.666 17.846 36 22.651 36 28c0 9.941-8.059 18-18 18S0 37.941 0 28c0-5.349 2.334-10.154 6.038-13.451l-1.485-2.971C1.893 6.259 5.761 0 11.708 0h12.584zM18 14c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14zm6.292-10H11.708C8.735 4 6.801 7.129 8.131 9.789l1.213 2.425A17.92 17.92 0 0 1 18 10a17.92 17.92 0 0 1 8.657 2.215l1.212-2.426C29.199 7.129 27.265 4 24.292 4z"
-                ></path>
-              </svg>
-            </div>
-            <div class="details__category">International Competitions</div>
-            <div class="details__content">
-              Represent Kenya on the world stage in prestigious competitions.
-            </div>
-          </div>
-          <div class="details__item" data-aos="animation-opacity">
-            <div class="details__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-              >
-                <path
-                  fill="#23262f"
-                  fill-rule="evenodd"
-                  d="M34.201 5.917l.05.05.336.35.019.02h0l.036.038.309.339.048.054h0l.018.021C38.119 10.314 40 14.937 40 20s-1.881 9.686-4.982 13.209l-.018.021-.048.055-.309.339-.038.041-.354.368-.05.05-.059.059c-.244.244-.495.482-.751.714l-.071.063-.385.335-.086.073a20.19 20.19 0 0 1-.783.625l-.066.05A19.91 19.91 0 0 1 20 40a19.92 19.92 0 0 1-12.849-4.673l-.086-.073-.384-.335-.071-.064a20.08 20.08 0 0 1-1.213-1.191 20.47 20.47 0 0 1-.395-.435l.357.394-.309-.339-.048-.054h0l-.019-.021C1.881 29.686 0 25.063 0 20s1.881-9.686 4.982-13.209l.019-.021.048-.055.308-.339.036-.038.019-.02c.386-.411.789-.806 1.208-1.183l.06-.054.389-.339.104-.088a19.99 19.99 0 0 1 .82-.651L8 3.999l.034-.025A19.91 19.91 0 0 1 20 0a19.91 19.91 0 0 1 12 3.998l.038.029a20.16 20.16 0 0 1 .788.627l.105.088.389.339.06.054a20.2 20.2 0 0 1 .762.723l.059.059h0zM20 4c-3.338 0-6.438 1.022-9.002 2.771C14.112 10.296 16 14.928 16 20s-1.888 9.704-5 13.229C13.562 34.978 16.662 36 20 36s6.438-1.022 9.002-2.771C25.888 29.704 24 25.072 24 20s1.888-9.704 5-13.229C26.438 5.022 23.338 4 20 4zM8 9.417l-.111.126C5.466 12.347 4 16.002 4 20a15.94 15.94 0 0 0 4 10.583c2.49-2.821 4-6.526 4-10.583A15.94 15.94 0 0 0 8 9.417zm24.001.001l-.108.122C29.467 12.344 28 16.001 28 20a15.94 15.94 0 0 0 3.999 10.582A15.93 15.93 0 0 0 36 20a15.94 15.94 0 0 0-3.999-10.582z"
-                ></path>
-              </svg>
-            </div>
-            <div class="details__category">National Competitions</div>
-            <div class="details__content">
-              Compete in countrywide championships to earn national recognition.
-            </div>
-          </div>
-          <div class="details__item" data-aos="animation-opacity">
-            <div class="details__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="38"
-                height="44"
-                viewBox="0 0 38 44"
-              >
-                <path
-                  fill="#23262f"
-                  fill-rule="evenodd"
-                  d="M18 8c9.941 0 18 8.059 18 18s-8.059 18-18 18S0 35.941 0 26 8.059 8 18 8zm0 4c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14zm0 4a2 2 0 0 1 2 2v8a2 2 0 1 1-4 0v-8a2 2 0 0 1 2-2zm14.586-9.414a2 2 0 0 1 2.828 0h0l2 2a2 2 0 0 1-2.828 2.828h0l-2-2a2 2 0 0 1 0-2.828zM22 0a2 2 0 1 1 0 4h0-8a2 2 0 1 1 0-4h0z"
-                ></path>
-              </svg>
-            </div>
-            <div class="details__category">County Competitions</div>
-            <div class="details__content">
-              Participate in local events to develop skills and build
-              experience.
-            </div>
-          </div>
-          <div class="details__item" data-aos="animation-opacity">
-            <div class="details__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="38"
-                height="44"
-                viewBox="0 0 38 44"
-              >
-                <path
-                  fill="#23262f"
-                  fill-rule="evenodd"
-                  d="M18 8c9.941 0 18 8.059 18 18s-8.059 18-18 18S0 35.941 0 26 8.059 8 18 8zm0 4c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14zm0 4a2 2 0 0 1 2 2v8a2 2 0 1 1-4 0v-8a2 2 0 0 1 2-2zm14.586-9.414a2 2 0 0 1 2.828 0h0l2 2a2 2 0 0 1-2.828 2.828h0l-2-2a2 2 0 0 1 0-2.828zM22 0a2 2 0 1 1 0 4h0-8a2 2 0 1 1 0-4h0z"
-                ></path>
-              </svg>
-            </div>
-            <div class="details__category">Fun Days</div>
-            <div class="details__content">
-              Community events that showcase sports and engage new participants.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-pb quality">
-      <div class="quality__center center">
-        <div class="quality__list">
-          <div class="quality__item" data-aos="animation-opacity">
-            <div class="quality__preview">
-              <img src="/img/content/user-green.svg" alt="User" />
-            </div>
-            <div class="quality__counter">500+</div>
-            <div class="quality__title">Athletes</div>
-            <div class="quality__content">
-              Training across multiple sports disciplines.
-            </div>
-          </div>
-          <div class="quality__item" data-aos="animation-opacity">
-            <div class="quality__preview">
+          </a>
+          <div class="main__gallery">
+            <div
+              class="main__preview"
+              data-aos="animation-translate-up"
+              data-aos-anchor=".main__gallery"
+            >
               <img
-                src="/img/content/electrical-plug.svg"
-                alt="Electrical Plug"
+                class="some-icon"
+                src="/img/content/avatar-8.png"
+                alt="Watch"
+              /><img
+                class="some-icon-dark"
+                src="/img/content/avatar-8.png"
+                alt="Watch"
               />
             </div>
-            <div class="quality__counter">25+</div>
-            <div class="quality__title">Events</div>
-            <div class="quality__content">
-              Annual competitions and qualification tournaments.
+            <div
+              class="main__preview"
+              data-aos="animation-translate-up"
+              data-aos-delay="600"
+              data-aos-anchor=".main__gallery"
+            >
+              <img src="/img/content/ball.png" alt="Ball" />
             </div>
-          </div>
-          <div class="quality__item" data-aos="animation-opacity">
-            <div class="quality__preview">
-              <img src="/img/content/flag.svg" alt="Flag" />
+            <div
+              class="main__preview"
+              data-aos="animation-translate-up"
+              data-aos-delay="300"
+              data-aos-anchor=".main__gallery"
+            >
+              <img src="/img/content/bottle.png" alt="Bottle" />
             </div>
-            <div class="quality__counter">20+</div>
-            <div class="quality__title">Counties</div>
-            <div class="quality__content">
-              Building a nationwide talent network.
+            <div
+              class="main__preview"
+              data-aos="animation-translate-up"
+              data-aos-delay="900"
+              data-aos-anchor=".main__gallery"
+            >
+              <img src="/img/content/ball-black.png" alt="Ball black" />
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="section-bg advantages">
-      <div class="advantages__center center">
-        <div class="advantages__head">
-          <h2 class="advantages__title h2">Training Approach</h2>
-          <div class="advantages__info">
-            From local training centers to national facilities, develop skills
-            for all competition levels with support from the Ministry of Youth
-            Affairs, Creative Economy and Sports.
-          </div>
-        </div>
-        <div class="advantages__list">
-          <div class="advantages__item" data-aos="animation-opacity">
-            <div class="advantages__preview">
-              <img src="/img/content/hand-grip-circle.png" alt="Hand grip" />
+      <!-- <div class="clients">
+                  <div class="clients__center center">
+                      <div class="clients__title">Supported by top sports organizations</div>
+                      <div class="clients__list">
+                          <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/rotashow.svg" alt="Ministry of Youth Affairs"></div>
+                          <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/waves.svg" alt="Kenya Sports Federation"></div>
+                          <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/rotashow.svg" alt="National Olympic Committee"></div>
+                          <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/travelers.svg" alt="County Sports Associations"></div>
+                          <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/goldlines.svg" alt="International Rafting Federation"></div>
+                          <div class="clients__logo" data-aos="animation-opacity"><img src="/img/content/velocity9.svg" alt="Ministry of Sports"></div>
+                      </div>
+                  </div>
+              </div> -->
+      <div class="section steps" id="steps">
+        <div class="steps__center center">
+          <div class="steps__head">
+            <h2 class="steps__title h2">Our Path to Excellence</h2>
+            <div class="steps__info">
+              A structured pathway for athletes of all levels, focused on
+              multi-disciplinary sports development in partnership with the
+              Ministry of Youth Affairs, Creative Economy and Sports.
             </div>
-            <div class="advantages__subtitle">Athlete-centered</div>
           </div>
-          <div class="advantages__item" data-aos="animation-opacity">
-            <div class="advantages__preview">
-              <img src="/img/content/gloves-circle.png" alt="Gloves" />
+          <div class="steps__list">
+            <div class="steps__item" data-aos="animation-opacity">
+              <div class="steps__preview" style="background-color: #3772FF;">
+                <img src="/img/content/download.svg" alt="Step 1" />
+              </div>
+              <div class="steps__number">Step 1</div>
+              <div class="steps__subtitle">Join</div>
+              <div class="steps__content">
+                Become a member of Kenya's premier sports academy.
+              </div>
             </div>
-            <div class="advantages__subtitle">Performance tracking</div>
-          </div>
-          <div class="advantages__item" data-aos="animation-opacity">
-            <div class="advantages__preview">
-              <img src="/img/content/bottle-circle.png" alt="Bottle" />
+            <div class="steps__item" data-aos="animation-opacity">
+              <div class="steps__preview" style="background-color: #9757D7;">
+                <img src="/img/content/whistle.svg" alt="Step 2" />
+              </div>
+              <div class="steps__number">Step 2</div>
+              <div class="steps__subtitle">Train</div>
+              <div class="steps__content">
+                Select your program and train with expert coaches.
+              </div>
             </div>
-            <div class="advantages__subtitle">Competition pathways</div>
+            <div class="steps__item" data-aos="animation-opacity">
+              <div class="steps__preview" style="background-color: #EF466F;">
+                <img src="/img/content/medal.svg" alt="Step 3" />
+              </div>
+              <div class="steps__number">Step 3</div>
+              <div class="steps__subtitle">Set Goals</div>
+              <div class="steps__content">
+                Aim for national and international competition.
+              </div>
+            </div>
+            <div class="steps__item" data-aos="animation-opacity">
+              <div class="steps__preview" style="background-color: #45B26B;">
+                <img src="/img/content/stopwatch.svg" alt="Step 4" />
+              </div>
+              <div class="steps__number">Step 4</div>
+              <div class="steps__subtitle">Compete</div>
+              <div class="steps__content">
+                Represent Kenya at competitions of all levels.
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="workouts">
-      <div class="workouts__center center">
-        <div class="workouts__gallery">
-          <div class="workouts__preview">
-            <img
-              class="some-icon"
-              src="/img/content/avatar-7.png"
-              alt="Phones"
-            /><img
-              class="some-icon-dark"
-              src="/img/content/avatar-7.png"
-              alt="Phones"
+      <div class="intro" id="intro">
+        <div class="intro__center center">
+          <div class="intro__gallery">
+            <div
+              class="intro__preview"
+              data-aos="animation-translate-up"
+              data-aos-anchor=".intro__gallery"
+            >
+              <img src="/img/content/bag.png" alt="Bag" />
+            </div>
+            <div
+              class="intro__preview"
+              data-aos="animation-translate-up"
+              data-aos-delay="300"
+              data-aos-anchor=".intro__gallery"
+            >
+              <img src="/img/content/gloves.png" alt="Gloves" />
+            </div>
+            <div
+              class="intro__preview"
+              data-aos="animation-translate-up"
+              data-aos-delay="600"
+              data-aos-anchor=".intro__gallery"
+            >
+              <img src="/img/content/bottle-1.png" alt="Bottle" />
+            </div>
+          </div>
+          <div class="intro__wrap">
+            <h2 class="intro__title h1">Elite Training Programs</h2>
+            <div class="intro__text">
+              Developing top athletes in multiple sports disciplines who represent
+              Kenya on the international stage. 🏆
+            </div>
+            <a class="button intro__button" href="/contact">Start Your Journey</a>
+          </div>
+        </div>
+      </div>
+      <div class="section-bg book">
+        <div class="book__center center">
+          <div class="book__gallery">
+            <div class="book__preview">
+              <img
+                class="some-icon"
+                src="/img/content/programs.png"
+                alt="Book pic"
+              /><img
+                class="some-icon-dark"
+                src="/img/content/programs.png"
+                alt="Book pic"
+              />
+            </div>
+            <div
+              class="book__preview"
+              data-aos="animation-translate-up"
+              data-aos-anchor=".book__gallery"
+            >
+              <img src="/img/content/ball.png" alt="Ball" />
+            </div>
+            <div
+              class="book__preview"
+              data-aos="animation-translate-up"
+              data-aos-delay="300"
+              data-aos-anchor=".book__gallery"
+            >
+              <img src="/img/content/ball-green.png" alt="Ball" />
+            </div>
+            <div
+              class="book__preview"
+              data-aos="animation-translate-up"
+              data-aos-delay="600"
+              data-aos-anchor=".book__gallery"
+            >
+              <img src="/img/content/dumbbells.png" alt="Dumbbells" />
+            </div>
+          </div>
+          <div class="book__wrap">
+            <h2 class="book__title h2">Training Programs</h2>
+            <div class="book__info">
+              Choose from programs designed for all levels, with focus on
+              multi-disciplinary sports development.
+            </div>
+            <div class="book__list">
+              <div class="book__item">
+                <div class="book__icon" style="background-color: #45B26B;">
+                  <img src="/img/content/user.svg" alt="User" />
+                </div>
+                <div class="book__details">
+                  <div class="book__subtitle">Beginners</div>
+                  <div class="book__content">
+                    Introduction to sports fundamentals and athletic development.
+                  </div>
+                </div>
+              </div>
+              <div class="book__item">
+                <div class="book__icon" style="background-color: #9757D7;">
+                  <img src="/img/content/medal-1.svg" alt="Medal" />
+                </div>
+                <div class="book__details">
+                  <div class="book__subtitle">Advanced</div>
+                  <div class="book__content">
+                    Competitive training for national and international events.
+                  </div>
+                </div>
+              </div>
+              <div class="book__item">
+                <div class="book__icon" style="background-color: #3772FF;">
+                  <img src="/img/content/lightning.svg" alt="Lightning" />
+                </div>
+                <div class="book__details">
+                  <div class="book__subtitle">Elite</div>
+                  <div class="book__content">
+                    Team Kenya preparation with personalized coaching.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book__note">
+              <strong class="book__green">10% Discount</strong> for <strong
+                class="book__black"
+                >Ministry of Youth Affairs, Creative Economy and Sports</strong
+              > affiliated organizations and members
+            </div>
+            <div class="book__btns">
+              <a class="button book__button" href="/contact"
+                >Join a Program
+                <svg class="icon icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section details">
+        <div class="details__center center">
+          <div class="details__head">
+            <div class="stage-small">Our Foundation</div>
+            <h2 class="details__title h2">Core Values</h2>
+          </div>
+          <div class="details__list">
+            <div class="details__item" data-aos="animation-opacity">
+              <div class="details__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="46"
+                  viewBox="0 0 36 46"
+                >
+                  <path
+                    fill="#23262f"
+                    fill-rule="evenodd"
+                    d="M24.292 0c5.947 0 9.815 6.259 7.155 11.578l-1.486 2.971C33.666 17.846 36 22.651 36 28c0 9.941-8.059 18-18 18S0 37.941 0 28c0-5.349 2.334-10.154 6.038-13.451l-1.485-2.971C1.893 6.259 5.761 0 11.708 0h12.584zM18 14c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14zm6.292-10H11.708C8.735 4 6.801 7.129 8.131 9.789l1.213 2.425A17.92 17.92 0 0 1 18 10a17.92 17.92 0 0 1 8.657 2.215l1.212-2.426C29.199 7.129 27.265 4 24.292 4z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="details__category">Integrity</div>
+              <div class="details__content">
+                Embracing good governance, transparency and clean sports free from
+                doping.
+              </div>
+            </div>
+            <div class="details__item" data-aos="animation-opacity">
+              <div class="details__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                >
+                  <path
+                    fill="#23262f"
+                    fill-rule="evenodd"
+                    d="M34.201 5.917l.05.05.336.35.019.02h0l.036.038.309.339.048.054h0l.018.021C38.119 10.314 40 14.937 40 20s-1.881 9.686-4.982 13.209l-.018.021-.048.055-.309.339-.038.041-.354.368-.05.05-.059.059c-.244.244-.495.482-.751.714l-.071.063-.385.335-.086.073a20.19 20.19 0 0 1-.783.625l-.066.05A19.91 19.91 0 0 1 20 40a19.92 19.92 0 0 1-12.849-4.673l-.086-.073-.384-.335-.071-.064a20.08 20.08 0 0 1-1.213-1.191 20.47 20.47 0 0 1-.395-.435l.357.394-.309-.339-.048-.054h0l-.019-.021C1.881 29.686 0 25.063 0 20s1.881-9.686 4.982-13.209l.019-.021.048-.055.308-.339.036-.038.019-.02c.386-.411.789-.806 1.208-1.183l.06-.054.389-.339.104-.088a19.99 19.99 0 0 1 .82-.651L8 3.999l.034-.025A19.91 19.91 0 0 1 20 0a19.91 19.91 0 0 1 12 3.998l.038.029a20.16 20.16 0 0 1 .788.627l.105.088.389.339.06.054a20.2 20.2 0 0 1 .762.723l.059.059h0zM20 4c-3.338 0-6.438 1.022-9.002 2.771C14.112 10.296 16 14.928 16 20s-1.888 9.704-5 13.229C13.562 34.978 16.662 36 20 36s6.438-1.022 9.002-2.771C25.888 29.704 24 25.072 24 20s1.888-9.704 5-13.229C26.438 5.022 23.338 4 20 4zM8 9.417l-.111.126C5.466 12.347 4 16.002 4 20a15.94 15.94 0 0 0 4 10.583c2.49-2.821 4-6.526 4-10.583A15.94 15.94 0 0 0 8 9.417zm24.001.001l-.108.122C29.467 12.344 28 16.001 28 20a15.94 15.94 0 0 0 3.999 10.582A15.93 15.93 0 0 0 36 20a15.94 15.94 0 0 0-3.999-10.582z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="details__category">Leadership</div>
+              <div class="details__content">
+                Providing honest & competent leadership with strategic
+                partnerships.
+              </div>
+            </div>
+            <div class="details__item" data-aos="animation-opacity">
+              <div class="details__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="38"
+                  height="44"
+                  viewBox="0 0 38 44"
+                >
+                  <path
+                    fill="#23262f"
+                    fill-rule="evenodd"
+                    d="M18 8c9.941 0 18 8.059 18 18s-8.059 18-18 18S0 35.941 0 26 8.059 8 18 8zm0 4c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14zm0 4a2 2 0 0 1 2 2v8a2 2 0 1 1-4 0v-8a2 2 0 0 1 2-2zm14.586-9.414a2 2 0 0 1 2.828 0h0l2 2a2 2 0 0 1-2.828 2.828h0l-2-2a2 2 0 0 1 0-2.828zM22 0a2 2 0 1 1 0 4h0-8a2 2 0 1 1 0-4h0z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="details__category">Growth</div>
+              <div class="details__content">
+                Expanding Kenya's competitive talent pool across multiple sports.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-border-top about">
+        <div class="about__center center">
+          <div class="about__row">
+            <div class="about__col">
+              <div class="stage">CEDER SPORTS ACADEMY</div>
+            </div>
+            <div class="about__col">
+              <h2 class="about__title h2">Athlete-centered approach</h2>
+              <div class="about__info">
+                Empowering Kenyan athletes to excel globally through
+                multi-disciplinary sports training.
+              </div>
+            </div>
+          </div>
+          <div class="about__row">
+            <div class="about__col">
+              <div class="about__list">
+                <div class="about__item" data-aos="animation-opacity">
+                  <div class="about__number" style="background-color: #9757D7;">
+                    01
+                  </div>
+                  <div class="about__subtitle">Expert Coaching</div>
+                  <div class="about__content">
+                    Train with Kenya's top multi-disciplinary sports
+                    professionals.
+                  </div>
+                </div>
+                <div class="about__item" data-aos="animation-opacity">
+                  <div class="about__number" style="background-color: #EF466F;">
+                    02
+                  </div>
+                  <div class="about__subtitle">Quality Facilities</div>
+                  <div class="about__content">
+                    Access premier training venues across Kenya with funding from
+                    Sports and Arts Social Development Fund.
+                  </div>
+                </div>
+                <div class="about__item" data-aos="animation-opacity">
+                  <div class="about__number" style="background-color: #45B26B;">
+                    03
+                  </div>
+                  <div class="about__subtitle">International Focus</div>
+                  <div class="about__content">
+                    Prepare for competition at the highest levels with Ministry
+                    support.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about__col">
+              <div class="about__bg">
+                <img src="/img/content/runimage.png" alt="About pic" />
+                <div class="about__preview" data-aos="animation-translate-up">
+                  <img src="/img/content/plate.png" alt="Plate" />
+                </div>
+                <button class="play" aria-label="Play video">
+                  <svg class="icon icon-play">
+                    <use xlink:href="#icon-play"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="section review">
+                  <div class="review__center center">
+                      <div class="review__wrap">
+                          <div class="review__slider js-slider-review">
+                              <div class="review__slide">
+                                  <div class="review__item">
+                                      <div class="review__logo"><img src="/img/content/velocity9.svg" alt="Ministry of Youth Affairs"></div>
+                                      <div class="review__title">CEDER Sports Academy is creating pathways for Kenya's athletes to compete internationally.</div>
+                                      <div class="review__author">John Mwangi</div>
+                                      <div class="review__position">Ministry of Sports</div>
+                                  </div>
+                              </div>
+                              <div class="review__slide">
+                                  <div class="review__item">
+                                      <div class="review__logo"><img src="/img/content/travelers.svg" alt="International Rafting Federation"></div>
+                                      <div class="review__title">Kenya's structured approach to athlete development is impressive and promising.</div>
+                                      <div class="review__author">Sarah Johnson</div>
+                                      <div class="review__position">Int. Rafting Federation</div>
+                                  </div>
+                              </div>
+                              <div class="review__slide">
+                                  <div class="review__item">
+                                      <div class="review__logo"><img src="/img/content/goldlines.svg" alt="County Sports Association"></div>
+                                      <div class="review__title">Their programs are accessible, professional and results-driven.</div>
+                                      <div class="review__author">Robert Kosgei</div>
+                                      <div class="review__position">County Sports</div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div> -->
+
+              <div class="section events">
+                <div class="details__center center">
+                  <div class="details__head">
+                    <div class="stage-small">Competitions</div>
+                    <h2 class="details__title h2">Event Calendar</h2>
+                  </div>
+                  <div class="details__list">
+                    <!-- DUATHLON EVENT ITEM -->
+                    <div class="details__item details__item--featured" data-aos="animation-opacity">
+                      <div class="details__icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="38"
+                          height="44"
+                          viewBox="0 0 38 44"
+                        >
+                          <path
+                            fill="#23262f"
+                            fill-rule="evenodd"
+                            d="M18 8c9.941 0 18 8.059 18 18s-8.059 18-18 18S0 35.941 0 26 8.059 8 18 8zm0 4c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14zm0 4a2 2 0 0 1 2 2v8a2 2 0 1 1-4 0v-8a2 2 0 0 1 2-2zm14.586-9.414a2 2 0 0 1 2.828 0h0l2 2a2 2 0 0 1-2.828 2.828h0l-2-2a2 2 0 0 1 0-2.828zM22 0a2 2 0 1 1 0 4h0-8a2 2 0 1 1 0-4h0z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="details__category">
+                        <a href="https://www.vipingoridge.com/news/duathlon-sponsor-confirmed-cederlinks-and-ceder-sports-academy" target="_blank" class="details__link">
+                          Ceder Sports Academy Duathlon - April 19, 2025
+                          <svg class="icon icon-arrow-right" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#4caf50"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+      <div class="section-pb quality">
+        <div class="quality__center center">
+          <div class="quality__list">
+            <div class="quality__item" data-aos="animation-opacity">
+              <div class="quality__preview">
+                <img src="/img/content/user-green.svg" alt="User" />
+              </div>
+              <div class="quality__counter">500+</div>
+              <div class="quality__title">Athletes</div>
+              <div class="quality__content">
+                Training across multiple sports disciplines.
+              </div>
+            </div>
+            <div class="quality__item" data-aos="animation-opacity">
+              <div class="quality__preview">
+                <img
+                  src="/img/content/electrical-plug.svg"
+                  alt="Electrical Plug"
+                />
+              </div>
+              <div class="quality__counter">25+</div>
+              <div class="quality__title">Events</div>
+              <div class="quality__content">
+                Annual competitions and qualification tournaments.
+              </div>
+            </div>
+            <div class="quality__item" data-aos="animation-opacity">
+              <div class="quality__preview">
+                <img src="/img/content/flag.svg" alt="Flag" />
+              </div>
+              <div class="quality__counter">20+</div>
+              <div class="quality__title">Counties</div>
+              <div class="quality__content">
+                Building a nationwide talent network.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-bg advantages">
+        <div class="advantages__center center">
+          <div class="advantages__head">
+            <h2 class="advantages__title h2">Training Approach</h2>
+            <div class="advantages__info">
+              From local training centers to national facilities, develop skills
+              for all competition levels with support from the Ministry of Youth
+              Affairs, Creative Economy and Sports.
+            </div>
+          </div>
+          <div class="advantages__list">
+            <div class="advantages__item" data-aos="animation-opacity">
+              <div class="advantages__preview">
+                <img src="/img/content/hand-grip-circle.png" alt="Hand grip" />
+              </div>
+              <div class="advantages__subtitle">Athlete-centered</div>
+            </div>
+            <div class="advantages__item" data-aos="animation-opacity">
+              <div class="advantages__preview">
+                <img src="/img/content/gloves-circle.png" alt="Gloves" />
+              </div>
+              <div class="advantages__subtitle">Performance tracking</div>
+            </div>
+            <div class="advantages__item" data-aos="animation-opacity">
+              <div class="advantages__preview">
+                <img src="/img/content/bottle-circle.png" alt="Bottle" />
+              </div>
+              <div class="advantages__subtitle">Competition pathways</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="workouts">
+        <div class="workouts__center center">
+          <div class="workouts__gallery">
+            <div class="workouts__preview">
+              <img
+                class="some-icon"
+                src="/img/content/avatar-7.png"
+                alt="Phones"
+              /><img
+                class="some-icon-dark"
+                src="/img/content/avatar-7.png"
+                alt="Phones"
+              />
+            </div>
+            <div
+              class="workouts__preview"
+              data-aos="animation-translate-up"
+              data-aos-anchor=".workouts__gallery"
+            >
+              <img src="/img/content/ball-green-1.png" alt="Ball" />
+            </div>
+            <div
+              class="workouts__preview"
+              data-aos="animation-translate-up"
+              data-aos-delay="400"
+              data-aos-anchor=".workouts__gallery"
+            >
+              <img src="/img/content/apple.png" alt="Apple" />
+            </div>
+          </div>
+          <div class="workouts__wrap">
+            <h2 class="workouts__title h2">Comprehensive Programs</h2>
+            <div class="workouts__info">
+              Structured training for competitive success across multiple sports
+              disciplines.
+            </div>
+            <ul class="workouts__list">
+              <li>Elite coaching from industry experts</li>
+              <li>Performance tracking and analytics</li>
+              <li>Regular competition at all levels</li>
+              <li>International opportunities with Ministry support</li>
+              <li>Multi-disciplinary sports development</li>
+            </ul>
+            <div class="workouts__btns">
+              <a class="button workouts__button" href="/contact">Choose Program</a
+              ><a class="button-stroke workouts__button" href="/contact"
+                >Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-border-top offers">
+        <div class="offers__center center">
+          <div class="stage">REPRESENT KENYA 🏆</div>
+          <h2 class="offers__title h1">Start Your Journey Today</h2>
+          <div class="offers__text">
+            Join Kenya's premier multi-disciplinary sports academy in partnership
+            with the Ministry of Youth Affairs, Creative Economy and Sports.
+          </div>
+          <a class="button offers__button" href="membership.html"
+            >Become a Member</a
+          >
+        </div>
+      </div>
+      <div class="popup popup_trainer mfp-hide" id="popup-trainer">
+        <div class="trainer">
+          <div class="trainer__avatar">
+            <img src="/img/content/avatar-5.png" alt="Avatar" />
+          </div>
+          <div class="trainer__name h3">John Kamau</div>
+          <div class="trainer__position">Head Coach</div>
+          <div class="trainer__socials">
+            <a
+              class="trainer__social"
+              href="https://facebook.com"
+              target="_blank"
+            >
+              <svg class="icon icon-facebook">
+                <use xlink:href="#icon-facebook"></use>
+              </svg></a
+            ><a
+              class="trainer__social"
+              href="https://instagram.com"
+              target="_blank"
+            >
+              <svg class="icon icon-instagram">
+                <use xlink:href="#icon-instagram"></use>
+              </svg></a
+            ><a
+              class="trainer__social"
+              href="https://twitter.com"
+              target="_blank"
+            >
+              <svg class="icon icon-twitter">
+                <use xlink:href="#icon-twitter"></use>
+              </svg></a
+            ><a
+              class="trainer__social"
+              href="https://linkedin.com"
+              target="_blank"
+            >
+              <svg class="icon icon-linkedin">
+                <use xlink:href="#icon-linkedin"></use>
+              </svg></a>
+          </div>
+          <form class="subscription">
+            <input
+              class="subscription__input"
+              type="email"
+              placeholder="Email for info"
+              required="required"
             />
+            <button class="subscription__btn">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </form>
+          <div class="trainer__wrap">
+            <div class="trainer__slider js-slider-trainer">
+              <div class="trainer__slide">
+                <a class="trainer__item" href="class01-details.html">
+                  <div class="trainer__preview">
+                    <img src="/img/content/card-pic-1@2x.png" alt="sports" />
+                    <div class="status-white trainer__category">sports</div>
+                  </div>
+                  <div class="trainer__head">
+                    <div class="trainer__title">Elite Team</div>
+                    <div class="status-stroke-green trainer__level">advanced</div>
+                  </div>
+                  <div class="trainer__parameters">
+                    <div class="trainer__parameter">
+                      <svg class="icon icon-button-play">
+                        <use xlink:href="#icon-button-play"></use>
+                      </svg>7
+                    </div>
+                    <div class="trainer__parameter">
+                      <svg class="icon icon-user">
+                        <use xlink:href="#icon-user"></use>
+                      </svg>32
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="trainer__slide">
+                <a class="trainer__item" href="class01-details.html">
+                  <div class="trainer__preview">
+                    <img src="/img/content/card-pic-2@2x.png" alt="training" />
+                    <div class="status-white trainer__category">youth</div>
+                  </div>
+                  <div class="trainer__head">
+                    <div class="trainer__title">Development</div>
+                    <div class="status-stroke-green trainer__level">beginner</div>
+                  </div>
+                  <div class="trainer__parameters">
+                    <div class="trainer__parameter">
+                      <svg class="icon icon-button-play">
+                        <use xlink:href="#icon-button-play"></use>
+                      </svg>5
+                    </div>
+                    <div class="trainer__parameter">
+                      <svg class="icon icon-user">
+                        <use xlink:href="#icon-user"></use>
+                      </svg>48
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
-          <div
-            class="workouts__preview"
-            data-aos="animation-translate-up"
-            data-aos-anchor=".workouts__gallery"
-          >
-            <img src="/img/content/ball-green-1.png" alt="Ball" />
-          </div>
-          <div
-            class="workouts__preview"
-            data-aos="animation-translate-up"
-            data-aos-delay="400"
-            data-aos-anchor=".workouts__gallery"
-          >
-            <img src="/img/content/apple.png" alt="Apple" />
-          </div>
-        </div>
-        <div class="workouts__wrap">
-          <h2 class="workouts__title h2">Comprehensive Programs</h2>
-          <div class="workouts__info">
-            Structured training for competitive success across multiple sports
-            disciplines.
-          </div>
-          <ul class="workouts__list">
-            <li>Elite coaching from industry experts</li>
-            <li>Performance tracking and analytics</li>
-            <li>Regular competition at all levels</li>
-            <li>International opportunities with Ministry support</li>
-            <li>Multi-disciplinary sports development</li>
-          </ul>
-          <div class="workouts__btns">
-            <a class="button workouts__button" href="/contact">Choose Program</a
-            ><a class="button-stroke workouts__button" href="/contact"
-              >Learn More</a>
+          <div class="trainer__btns">
+            <button class="button-small trainer__button">View all programs</button
+            >
           </div>
         </div>
       </div>
     </div>
-    <div class="section-border-top offers">
-      <div class="offers__center center">
-        <div class="stage">REPRESENT KENYA 🏆</div>
-        <h2 class="offers__title h1">Start Your Journey Today</h2>
-        <div class="offers__text">
-          Join Kenya's premier multi-disciplinary sports academy in partnership
-          with the Ministry of Youth Affairs, Creative Economy and Sports.
-        </div>
-        <a class="button offers__button" href="membership.html"
-          >Become a Member</a
-        >
+    <!-- footer-->
+    <!-- video poup -->
+    <div id="videoPopup" class="video-popup hidden" role="dialog" aria-modal="true" aria-labelledby="videoPopupTitle">
+      <div class="video-popup-overlay" tabindex="-1" data-close-popup></div>
+      <div class="video-popup-content">
+        <button class="video-popup-close" aria-label="Close video popup" data-close-popup>×</button>
+        <h2 id="videoPopupTitle" class="visually-hidden">Academy Video</h2>
+        <video id="popupVideoPlayer" controls preload="metadata">
+          <source src="/video/cedar.mp4" type="video/mp4">
+          Your browser does not support the video tag. Please update your browser.
+        </video>
       </div>
     </div>
+    <!-- **** END VIDEO POPUP HTML **** -->
+
+
+    <!-- ... (Your existing #popup-trainer popup) ... -->
     <div class="popup popup_trainer mfp-hide" id="popup-trainer">
-      <div class="trainer">
-        <div class="trainer__avatar">
-          <img src="/img/content/avatar-5.png" alt="Avatar" />
-        </div>
-        <div class="trainer__name h3">John Kamau</div>
-        <div class="trainer__position">Head Coach</div>
-        <div class="trainer__socials">
-          <a
-            class="trainer__social"
-            href="https://facebook.com"
-            target="_blank"
-          >
-            <svg class="icon icon-facebook">
-              <use xlink:href="#icon-facebook"></use>
-            </svg></a
-          ><a
-            class="trainer__social"
-            href="https://instagram.com"
-            target="_blank"
-          >
-            <svg class="icon icon-instagram">
-              <use xlink:href="#icon-instagram"></use>
-            </svg></a
-          ><a
-            class="trainer__social"
-            href="https://twitter.com"
-            target="_blank"
-          >
-            <svg class="icon icon-twitter">
-              <use xlink:href="#icon-twitter"></use>
-            </svg></a
-          ><a
-            class="trainer__social"
-            href="https://linkedin.com"
-            target="_blank"
-          >
-            <svg class="icon icon-linkedin">
-              <use xlink:href="#icon-linkedin"></use>
-            </svg></a>
-        </div>
-        <form class="subscription">
-          <input
-            class="subscription__input"
-            type="email"
-            placeholder="Email for info"
-            required="required"
-          />
-          <button class="subscription__btn">
-            <svg class="icon icon-arrow-right">
-              <use xlink:href="#icon-arrow-right"></use>
-            </svg>
-          </button>
-        </form>
-        <div class="trainer__wrap">
-          <div class="trainer__slider js-slider-trainer">
-            <div class="trainer__slide">
-              <a class="trainer__item" href="class01-details.html">
-                <div class="trainer__preview">
-                  <img src="/img/content/card-pic-1@2x.png" alt="sports" />
-                  <div class="status-white trainer__category">sports</div>
-                </div>
-                <div class="trainer__head">
-                  <div class="trainer__title">Elite Team</div>
-                  <div class="status-stroke-green trainer__level">advanced</div>
-                </div>
-                <div class="trainer__parameters">
-                  <div class="trainer__parameter">
-                    <svg class="icon icon-button-play">
-                      <use xlink:href="#icon-button-play"></use>
-                    </svg>7
-                  </div>
-                  <div class="trainer__parameter">
-                    <svg class="icon icon-user">
-                      <use xlink:href="#icon-user"></use>
-                    </svg>32
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="trainer__slide">
-              <a class="trainer__item" href="class01-details.html">
-                <div class="trainer__preview">
-                  <img src="/img/content/card-pic-2@2x.png" alt="training" />
-                  <div class="status-white trainer__category">youth</div>
-                </div>
-                <div class="trainer__head">
-                  <div class="trainer__title">Development</div>
-                  <div class="status-stroke-green trainer__level">beginner</div>
-                </div>
-                <div class="trainer__parameters">
-                  <div class="trainer__parameter">
-                    <svg class="icon icon-button-play">
-                      <use xlink:href="#icon-button-play"></use>
-                    </svg>5
-                  </div>
-                  <div class="trainer__parameter">
-                    <svg class="icon icon-user">
-                      <use xlink:href="#icon-user"></use>
-                    </svg>48
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="trainer__btns">
-          <button class="button-small trainer__button">View all programs</button
-          >
-        </div>
-      </div>
+      <!-- ... -->
     </div>
   </div>
-  <!-- footer-->
-   <!-- video poup -->
-  <div id="videoPopup" class="video-popup hidden" role="dialog" aria-modal="true" aria-labelledby="videoPopupTitle">
-    <div class="video-popup-overlay" tabindex="-1" data-close-popup></div>
-    <div class="video-popup-content">
-      <button class="video-popup-close" aria-label="Close video popup" data-close-popup>×</button>
-      <h2 id="videoPopupTitle" class="visually-hidden">Academy Video</h2>
-      <video id="popupVideoPlayer" controls preload="metadata">
-        <source src="/video/cedar.mp4" type="video/mp4">
-        Your browser does not support the video tag. Please update your browser.
-      </video>
-    </div>
-  </div>
-  <!-- **** END VIDEO POPUP HTML **** -->
 
 
-  <!-- ... (Your existing #popup-trainer popup) ... -->
-  <div class="popup popup_trainer mfp-hide" id="popup-trainer">
-     <!-- ... -->
-  </div>
-</div>
-
-
-<!-- **** START VIDEO POPUP STYLES **** -->
-<style is:global>
-    .video-popup {
-      position: fixed;
-      inset: 0; /* A shorthand for top, right, bottom, left = 0 */
-      z-index: 1050; /* Ensure it's above most content, adjust if needed */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      /* Start hidden */
-      opacity: 0;
-      visibility: hidden;
-    }
-  
-    .video-popup:not(.hidden) {
-       /* Become visible */
-      opacity: 1;
-      visibility: visible;
-    }
-  
-    .video-popup-overlay {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
-      cursor: pointer;
-    }
-  
-    .video-popup-content {
-      position: relative; /* For positioning the close button */
-      background-color: #000; /* Black background is common for video */
-      padding: 10px; /* Small padding around the video */
-      border-radius: 8px;
-      max-width: 90vw; /* Max width relative to viewport width */
-      max-height: 90vh; /* Max height relative to viewport height */
-      z-index: 1051; /* Above overlay */
-      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-      display: flex; /* Helps contain the video */
-    }
-  
-    .video-popup-content video {
-      display: block; /* Prevents extra space below */
-      max-width: 100%;
-      max-height: calc(90vh - 20px); /* Consider popup padding */
-      height: auto; /* Maintain aspect ratio */
-      width: auto; /* Maintain aspect ratio */
-    }
-  
-    .video-popup-close {
-      position: absolute;
-      top: -15px; /* Position slightly outside the top-right */
-      right: -15px;
-      width: 35px;
-      height: 35px;
-      font-size: 24px;
-      font-weight: bold;
-      line-height: 33px; /* Vertically center the 'x' */
-      text-align: center;
-      color: #333;
-      background-color: #fff;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      z-index: 1052; /* Above content */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      transition: background-color 0.2s ease;
-    }
-    .video-popup-close:hover,
-    .video-popup-close:focus {
-      background-color: #eee;
-      outline: none; /* Basic focus style, improve if needed */
-    }
-  
-    /* Visually hidden class for accessibility */
-    .visually-hidden {
+  <!-- **** START VIDEO POPUP STYLES **** -->
+  <style is:global>
+      .video-popup {
+        position: fixed;
+        inset: 0; /* A shorthand for top, right, bottom, left = 0 */
+        z-index: 1050; /* Ensure it's above most content, adjust if needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        /* Start hidden */
+        opacity: 0;
+        visibility: hidden;
+      }
+    
+      .video-popup:not(.hidden) {
+        /* Become visible */
+        opacity: 1;
+        visibility: visible;
+      }
+    
+      .video-popup-overlay {
         position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-    }
-  
-    /* Make sure the original play button is styled appropriately */
-    .about__bg button.play {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.5);
-      border: 2px solid white;
-      border-radius: 50%;
-      width: 70px; /* Adjust size as needed */
-      height: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      padding: 0; /* Remove default padding */
-      z-index: 10; /* Ensure it's above the image */
-    }
-  
-    .about__bg button.play:hover {
-      background: rgba(0, 0, 0, 0.7);
-    }
-  
-    .about__bg button.play .icon-play {
-      width: 25px; /* Adjust icon size */
-      height: 25px;
-      fill: white;
-      display: block; /* Ensure proper rendering */
-      margin-left: 5px; /* Nudge the play icon slightly right for visual centering */
-    }
-  
-  </style>
-  <!-- **** END VIDEO POPUP STYLES **** -->
-  
-  
-  <!-- **** START VIDEO POPUP SCRIPT **** -->
-  <script is:inline>
-    // Wait for the DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', () => {
-      // Select the elements
-      const playButton = document.querySelector('.about__bg .play'); // Make selector specific
-      const videoPopup = document.getElementById('videoPopup');
-      const videoPlayer = document.getElementById('popupVideoPlayer');
-      const closeTriggers = document.querySelectorAll('[data-close-popup]'); // Select close button and overlay
-  
-      // Check if all elements exist
-      if (!playButton) {
-          console.warn("Video play button (.about__bg .play) not found.");
-          return;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+        cursor: pointer;
       }
-      if (!videoPopup) {
-          console.error("Video popup container (#videoPopup) not found.");
-          return;
+    
+      .video-popup-content {
+        position: relative; /* For positioning the close button */
+        background-color: #000; /* Black background is common for video */
+        padding: 10px; /* Small padding around the video */
+        border-radius: 8px;
+        max-width: 90vw; /* Max width relative to viewport width */
+        max-height: 90vh; /* Max height relative to viewport height */
+        z-index: 1051; /* Above overlay */
+        box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        display: flex; /* Helps contain the video */
       }
-       if (!videoPlayer) {
-          console.error("Video player element (#popupVideoPlayer) not found.");
-          return;
+    
+      .video-popup-content video {
+        display: block; /* Prevents extra space below */
+        max-width: 100%;
+        max-height: calc(90vh - 20px); /* Consider popup padding */
+        height: auto; /* Maintain aspect ratio */
+        width: auto; /* Maintain aspect ratio */
       }
-       if (closeTriggers.length === 0) {
-          console.warn("Video popup close triggers ([data-close-popup]) not found.");
-          // You could still proceed but closing might not work
+    
+      .video-popup-close {
+        position: absolute;
+        top: -15px; /* Position slightly outside the top-right */
+        right: -15px;
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 33px; /* Vertically center the 'x' */
+        text-align: center;
+        color: #333;
+        background-color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1052; /* Above content */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        transition: background-color 0.2s ease;
       }
-  
-  
-      // Function to open the popup
-      const openPopup = () => {
-        if (videoPopup && videoPlayer) {
-          videoPopup.classList.remove('hidden');
-          videoPopup.focus(); // Focus the popup for accessibility
-          videoPlayer.play().catch(error => {
-            console.log("Autoplay was prevented by the browser:", error);
-            // Video will load but might not play automatically depending on browser policy
+      .video-popup-close:hover,
+      .video-popup-close:focus {
+        background-color: #eee;
+        outline: none; /* Basic focus style, improve if needed */
+      }
+    
+      /* Visually hidden class for accessibility */
+      .visually-hidden {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+      }
+    
+      /* Make sure the original play button is styled appropriately */
+      .about__bg button.play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 70px; /* Adjust size as needed */
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 0; /* Remove default padding */
+        z-index: 10; /* Ensure it's above the image */
+      }
+    
+      .about__bg button.play:hover {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    
+      .about__bg button.play .icon-play {
+        width: 25px; /* Adjust icon size */
+        height: 25px;
+        fill: white;
+        display: block; /* Ensure proper rendering */
+        margin-left: 5px; /* Nudge the play icon slightly right for visual centering */
+      }
+
+      /* Featured event item styling */
+.details__item--featured {
+  border: 2px solid gold;
+  color: gold;
+  padding: 20px !important;
+  border-radius: 10px;
+  background-color: rgba(55, 114, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details__item--featured:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(55, 114, 255, 0.1);
+}
+
+.details__link {
+  display: flex;
+  align-items: center;
+  color: #4caf50;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.details__link:hover {
+  color: #30bd35;
+}
+
+.details__link .icon {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.details__link:hover .icon {
+  transform: translateX(1px);
+}
+    
+    </style>
+    <!-- **** END VIDEO POPUP STYLES **** -->
+    
+    
+    <!-- **** START VIDEO POPUP SCRIPT **** -->
+    <script is:inline>
+      // Wait for the DOM to be fully loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        // Select the elements
+        const playButton = document.querySelector('.about__bg .play'); // Make selector specific
+        const videoPopup = document.getElementById('videoPopup');
+        const videoPlayer = document.getElementById('popupVideoPlayer');
+        const closeTriggers = document.querySelectorAll('[data-close-popup]'); // Select close button and overlay
+    
+        // Check if all elements exist
+        if (!playButton) {
+            console.warn("Video play button (.about__bg .play) not found.");
+            return;
+        }
+        if (!videoPopup) {
+            console.error("Video popup container (#videoPopup) not found.");
+            return;
+        }
+        if (!videoPlayer) {
+            console.error("Video player element (#popupVideoPlayer) not found.");
+            return;
+        }
+        if (closeTriggers.length === 0) {
+            console.warn("Video popup close triggers ([data-close-popup]) not found.");
+            // You could still proceed but closing might not work
+        }
+    
+    
+        // Function to open the popup
+        const openPopup = () => {
+          if (videoPopup && videoPlayer) {
+            videoPopup.classList.remove('hidden');
+            videoPopup.focus(); // Focus the popup for accessibility
+            videoPlayer.play().catch(error => {
+              console.log("Autoplay was prevented by the browser:", error);
+              // Video will load but might not play automatically depending on browser policy
+            });
+          }
+        };
+    
+        // Function to close the popup
+        const closePopup = () => {
+          if (videoPopup && videoPlayer) {
+            videoPopup.classList.add('hidden');
+            videoPlayer.pause();
+            videoPlayer.currentTime = 0; // Reset video to the start
+            playButton?.focus(); // Return focus to the button that opened it
+          }
+        };
+    
+        // Event listener for the play button
+        playButton.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevent any default button behavior
+          openPopup();
+        });
+    
+        // Event listeners for close triggers (button and overlay)
+        closeTriggers.forEach(trigger => {
+          trigger.addEventListener('click', () => {
+            closePopup();
           });
-        }
-      };
-  
-      // Function to close the popup
-      const closePopup = () => {
-        if (videoPopup && videoPlayer) {
-          videoPopup.classList.add('hidden');
-          videoPlayer.pause();
-          videoPlayer.currentTime = 0; // Reset video to the start
-          playButton?.focus(); // Return focus to the button that opened it
-        }
-      };
-  
-      // Event listener for the play button
-      playButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent any default button behavior
-        openPopup();
-      });
-  
-      // Event listeners for close triggers (button and overlay)
-      closeTriggers.forEach(trigger => {
-        trigger.addEventListener('click', () => {
-          closePopup();
+        });
+    
+        // Event listener for the Escape key
+        document.addEventListener('keydown', (event) => {
+          // Check if the popup is visible and the Escape key was pressed
+          if (event.key === 'Escape' && !videoPopup.classList.contains('hidden')) {
+            closePopup();
+          }
         });
       });
-  
-      // Event listener for the Escape key
-      document.addEventListener('keydown', (event) => {
-        // Check if the popup is visible and the Escape key was pressed
-        if (event.key === 'Escape' && !videoPopup.classList.contains('hidden')) {
-          closePopup();
-        }
-      });
-    });
-  </script>
+    </script>
