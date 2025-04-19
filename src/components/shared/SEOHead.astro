@@ -1,0 +1,154 @@
+---
+// src/components/shared/SEOHead.astro
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: 'website' | 'article' | 'profile';
+  keywords?: string;
+  author?: string;
+  pageType?: 'homepage' | 'about' | 'contact' | 'default';
+}
+
+// Default values that will be used if not provided
+const { 
+  title = "CEDER Sports Academy", 
+  description = "Kenya's premier multi-disciplinary sports training academy", 
+  image = "/img/content/logo.png", 
+  canonicalURL = Astro.url.href,
+  type = "website",
+  keywords = "sports academy, Kenya, athletic training, sports development",
+  author = "CEDER Sports Academy",
+  pageType = "default"
+} = Astro.props;
+
+// Generate a full image URL if it's a relative path
+// Fixed URL handling to avoid errors when Astro.site is not defined
+let fullImageUrl = image;
+
+// Only try to construct a full URL if it's not already absolute
+if (!image.startsWith('http')) {
+  if (Astro.site) {
+    // If Astro.site is defined, use it to create the full URL
+    fullImageUrl = new URL(image, Astro.site).toString();
+  } else {
+    // Fallback: Use the current URL's origin if Astro.site is not defined
+    fullImageUrl = new URL(image, Astro.url.origin).toString();
+  }
+}
+
+// Prepare the schema.org structured data URLs with safeguards
+const getFullUrl = (path: any) => {
+  if (Astro.site) {
+    return new URL(path, Astro.site).toString();
+  }
+  return new URL(path, Astro.url.origin).toString();
+};
+
+const siteUrl = Astro.site ? Astro.site.toString() : Astro.url.origin;
+const logoUrl = getFullUrl("/img/content/logo.png");
+const contactUrl = getFullUrl("/contact");
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content={author} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={fullImageUrl} />
+<meta property="og:site_name" content="CEDER Sports Academy" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={fullImageUrl} />
+
+<!-- Preloading critical assets -->
+<link rel="preload" href="/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/poppins-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/poppins-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/css/critical.min.css" as="style">
+
+<!-- Structured Data based on page type -->
+{pageType === 'homepage' && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "CEDER Sports Academy",
+    "url": siteUrl,
+    "logo": logoUrl,
+    "description": "Kenya's premier multi-disciplinary sports training institution in partnership with the Ministry of Youth Affairs, Creative Economy and Sports.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressRegion": "Kenya"
+    },
+    "email": "cedersportsacademy@gmail.com",
+    "openingHours": ["Mo-Fr 8:00-17:00", "Sa 9:00-13:00"],
+    "potentialAction": {
+      "@type": "JoinAction",
+      "target": contactUrl,
+      "name": "Join Now"
+    }
+  })} />
+)}
+
+{pageType === 'about' && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CEDER Sports Academy",
+      "description": "Kenya's premier multi-disciplinary sports training institution in partnership with the Ministry of Youth Affairs, Creative Economy and Sports.",
+      "foundingDate": "2023",
+      "founders": [{
+        "@type": "Person",
+        "name": "CEDER Sports Academy Founder"
+      }],
+      "knowsAbout": ["Sports Development", "Athletic Training", "Sports Coaching"]
+    }
+  })} />
+)}
+
+{pageType === 'contact' && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CEDER Sports Academy",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Kenya"
+      },
+      "email": "cedersportsacademy@gmail.com",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ]
+    }
+  })} />
+)}

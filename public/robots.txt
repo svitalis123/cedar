@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://https://cedersportsacademy.com/sitemap-0.xml

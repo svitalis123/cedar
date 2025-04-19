@@ -1,10 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Home from '../components/homepage/home.astro';
+
+// SEO metadata specific to the homepage
+const seoData = {
+  title: "CEDER Sports Academy - Kenya's Multi-Disciplinary Sports Academy",
+  description: "Kenya's premier multi-disciplinary sports training institution in partnership with the Ministry of Youth Affairs, Creative Economy and Sports.",
+  keywords: "sports academy, Kenya sports, athletic training, Kenyan athletes, sports development, multi-disciplinary sports",
+  pageType: "homepage" as const,
+  image: "/img/content/logo.png"  // Use a high-quality image from your site
+};
 ---
 
-<Layout>
-	<main>
-		<Home />
-	</main>
+<Layout {...seoData}>
+  <main>
+    <Home />
+  </main>
 </Layout>

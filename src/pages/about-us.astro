@@ -1,10 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import About from "../components/about/about.astro"
+import Layout from "../layouts/Layout.astro";
+import About from "../components/about/about.astro";
+
+// SEO metadata specific to the about page
+const seoData = {
+  title: "About CEDER Sports Academy - Our Mission and Vision",
+  description: "Learn about CEDER Sports Academy's mission, vision, values, and commitment to empowering Kenyan athletes for success in multi-disciplinary sports.",
+  keywords: "CEDER Sports Academy mission, vision, sports values, Kenyan sports development, athletic excellence, talent development",
+  pageType: "about" as const,
+  image: "/img/content/logo.png"  // Make sure this is a real image on your site
+};
 ---
 
-
-<Layout>
-    <!-- outer-->
+<Layout {...seoData}>
   <About />
 </Layout>
