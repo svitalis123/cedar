@@ -59,10 +59,53 @@ const {
     <!-- Critical CSS first (inline for faster render) -->
     <style is:inline>
       /* Critical CSS here - extract the most important styles for above-the-fold content */
-      /* This is a placeholder - you should extract your actual critical CSS */
       body, html { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
       .header { position: sticky; top: 0; z-index: 100; }
-      /* Add more critical styles as needed */
+      
+      /* Page Loader Styles */
+      .page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+      }
+
+      .page-loader.fade-out {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      /* Spinner Animation */
+      .loader-spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Dark mode support */
+      .dark .page-loader {
+        background: #1a1a1a;
+      }
+
+      .dark .loader-spinner {
+        border-color: #333;
+        border-top-color: #3498db;
+      }
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
@@ -87,11 +130,30 @@ const {
     </script>
   </head>
 	<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+      <div class="loader-spinner"></div>
+    </div>
+
 		<Header />
 		<slot />
 		<Footer />
+		
+    <!-- Page Loader Script -->
 		<script is:inline>
-			console.log(localStorage.getItem('darkMode'));
+      // Hide loader when page is fully loaded
+      window.addEventListener('load', function() {
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+          loader.classList.add('fade-out');
+          // Remove from DOM after animation completes
+          setTimeout(() => {
+            loader.remove();
+          }, 500);
+        }
+      });
+
+      // Dark mode handling
 			if (localStorage.getItem('darkMode') === "on") {
 					document.body.classList.add("dark");
 					document.addEventListener("DOMContentLoaded", function() {
